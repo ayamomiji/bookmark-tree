@@ -3,7 +3,21 @@
   %head
     %meta(charset='utf-8')
     %script(type='text/javascript' src='jquery.js')
+    %script(type='text/javascript' src='jquery.tmpl.js')
     %script(type='text/javascript' src='browser_action.js')
   %body
     #container
-    #url
+      #tree
+        %ul
+      #url
+    %script#directory-tmpl(type='text/x-jquery-tmpl')
+      .node.directory
+        .title
+          %img.favicon(src='chrome://favicon/${url}')
+          %a(href='${url}') ${title}
+        %ul.children
+    %script#bookmark-tmpl(type='text/x-jquery-tmpl')
+      .node.bookmark
+        .title
+          %img.favicon(src='chrome://favicon/${url}')
+          %a(href='${url}') ${title}
