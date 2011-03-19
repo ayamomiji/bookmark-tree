@@ -7,10 +7,9 @@
     %script(type='text/javascript' src='jquery.tmpl.js')
     %script(type='text/javascript' src='browser_action.js')
   %body
-    #container
-      #tree
-        %ul
-      #url
+    #tree
+      %ul
+    #url
     %script#directory-tmpl(type='text/x-jquery-tmpl')
       .node.directory(data-id='${id}')
         .title

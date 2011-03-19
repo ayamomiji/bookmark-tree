@@ -2,6 +2,11 @@
 
 body {
   font-size: 0.8em;
+  overflow: hidden;
+}
+
+#tree {
+  overflow-y: scroll;
 }
 
 ul ul {
@@ -10,4 +15,10 @@ ul ul {
 
 .favicon {
   vertical-align: middle;
+}
+
+.title {
+  height: 1.2em;
+  cursor: pointer;
+  overflow: hidden;
 }
