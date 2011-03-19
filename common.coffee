@@ -21,5 +21,6 @@ jQuery ($) ->
         left:   behaviors.directory?.left   || 'toggle'
         middle: behaviors.directory?.middle || 'openAllInCurrentWindow'
         right:  behaviors.directory?.right  || 'openAllInNewWindow'
+    customStyle: localStorage.customStyle || ''
 
   window.delay = (callback) -> setTimeout(callback, 10)

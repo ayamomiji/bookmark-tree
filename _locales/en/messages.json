@@ -76,5 +76,8 @@
   },
   "openAllInNewWindow": {
     "message": "Open all children in new window"
+  },
+  "customStyle": {
+    "message": "Custom style"
   }
 }

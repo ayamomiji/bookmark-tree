@@ -67,3 +67,8 @@ jQuery ($) ->
   $('#behaviors-directory-right')
     .val(options.behaviors.directory.right)
     .change(updateDirectoryBehaviors)
+
+  $('#custom-style')
+    .val(options.customStyle)
+    .bind 'change keypress mousewheel', ->
+      delay => localStorage.customStyle = this.value

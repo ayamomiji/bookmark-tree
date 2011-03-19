@@ -116,3 +116,5 @@ jQuery ($) ->
   $('.bookmark > .title').live 'mousemove', ->
     id = $(this).parent().attr('data-id')
     urlBar.text(treeData[id].url)
+
+  $('style').html(options.customStyle)

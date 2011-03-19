@@ -76,5 +76,8 @@
   },
   "openAllInNewWindow": {
     "message": "開啟所有書籤於新視窗"
+  },
+  "customStyle": {
+    "message": "自訂樣式"
   }
 }
