@@ -12,13 +12,13 @@
         %ul
       #url
     %script#directory-tmpl(type='text/x-jquery-tmpl')
-      .node.directory
+      .node.directory(data-id='${id}')
         .title
           %img.favicon(src='close.png')
-          %a(href='${url}') ${title}
+          %span.link ${title}
         %ul.children
     %script#bookmark-tmpl(type='text/x-jquery-tmpl')
-      .node.bookmark
+      .node.bookmark(data-id='${id}')
         .title
           %img.favicon(src='chrome://favicon/${url}')
-          %a(href='${url}') ${title}
+          %span.link ${title}
