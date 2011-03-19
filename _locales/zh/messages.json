@@ -25,5 +25,8 @@
   },
   "height": {
     "message": "高"
+  },
+  "rootDirectory": {
+    "message": "根目錄"
   }
 }

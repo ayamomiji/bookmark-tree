@@ -9,5 +9,6 @@ jQuery ($) ->
   window.options =
     width: parseInt(localStorage.width) || 300
     height: parseInt(localStorage.height) || 400
+    rootDirectory: localStorage.rootDirectory || '0'
 
   window.delay = (callback) -> setTimeout(callback, 10)

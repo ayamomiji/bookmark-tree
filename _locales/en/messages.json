@@ -25,5 +25,8 @@
   },
   "height": {
     "message": "Height"
+  },
+  "rootDirectory": {
+    "message": "Root directory"
   }
 }

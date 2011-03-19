@@ -24,3 +24,8 @@
         %h2(data-i18n-key='behavior')
       %section
         %h2(data-i18n-key='misc')
+
+        %h3(data-i18n-key='rootDirectory')
+        %select#root-directory
+          %script#root-directory-option-tmpl(type='text/x-jquery-tmpl')
+            %option(value='${id}') ${title}
