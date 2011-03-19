@@ -63,17 +63,31 @@ jQuery ($) ->
       openingDirectory[id] = null
       localStorage.openingDirectory = JSON.stringify(openingDirectory)
 
-  $('.directory > .title').live 'click', ->
+  $('.directory > .title').live 'mouseup', (e) ->
     self = $(this)
     directory = self.parent()
-    toggleDirectory(directory)
+    id = directory.attr('data-id')
+    node = treeData[id]
+    switch e.button
+      when 0 # left
+        directoryBehaviors[options.behaviors.directory.left](node)
+      when 1 # middle
+        directoryBehaviors[options.behaviors.directory.middle](node)
+      when 2 # right
+        directoryBehaviors[options.behaviors.directory.right](node)
 
-  toggleDirectory = (elem) ->
-    id = elem.attr('data-id')
-    if elem.hasClass('open')
-      closeDirectory(elem)
-    else
-      openDirectory(elem)
+  directoryBehaviors =
+    toggle: (node) ->
+      directory = $("[data-id=#{node.id}]")
+      if directory.hasClass('open')
+        closeDirectory(directory)
+      else
+        openDirectory(directory)
+    openAllInCurrentWindow: (node) ->
+      treeData[node.id].children.forEach (child) ->
+        chrome.tabs.create(url: child.url)
+    openAllInNewWindow: (node) ->
+      chrome.extension.sendRequest(type: 'openAllInNewWindow', directory: node)
 
   $('.bookmark > .title').live 'mouseup', (e) ->
     self = $(this)

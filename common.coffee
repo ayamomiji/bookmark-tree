@@ -17,5 +17,9 @@ jQuery ($) ->
         left:   behaviors.bookmark?.left   || 'openInNewTab'
         middle: behaviors.bookmark?.middle || 'openInCurrentTab'
         right:  behaviors.bookmark?.right  || 'openInBackgroundTab'
+      directory:
+        left:   behaviors.directory?.left   || 'toggle'
+        middle: behaviors.directory?.middle || 'openAllInCurrentWindow'
+        right:  behaviors.directory?.right  || 'openAllInNewWindow'
 
   window.delay = (callback) -> setTimeout(callback, 10)

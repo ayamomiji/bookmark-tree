@@ -55,5 +55,26 @@
   },
   "openInNewWindow": {
     "message": "開啟於新視窗"
+  },
+  "directoryBehavior": {
+    "message": "目錄行為"
+  },
+  "behaviorsDirectoryLeft": {
+    "message": "當按下左鍵時..."
+  },
+  "behaviorsDirectoryMiddle": {
+    "message": "當按下中鍵時..."
+  },
+  "behaviorsDirectoryRight": {
+    "message": "當按下右鍵時..."
+  },
+  "toggle": {
+    "message": "切換開關目錄"
+  },
+  "openAllInCurrentWindow": {
+    "message": "開啟所有書籤於目前視窗"
+  },
+  "openAllInNewWindow": {
+    "message": "開啟所有書籤於新視窗"
   }
 }

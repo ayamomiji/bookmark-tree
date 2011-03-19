@@ -47,3 +47,23 @@ jQuery ($) ->
   $('#behaviors-bookmark-right')
     .val(options.behaviors.bookmark.right)
     .change(updateBookmarkBehaviors)
+
+  updateDirectoryBehaviors = ->
+    behaviors = JSON.parse(localStorage.behaviors || '{}')
+    behaviors.directory =
+      left: $('#behaviors-directory-left').val()
+      middle: $('#behaviors-directory-middle').val()
+      right: $('#behaviors-directory-right').val()
+    localStorage.behaviors = JSON.stringify(behaviors)
+
+  $('#behaviors-directory-left')
+    .val(options.behaviors.directory.left)
+    .change(updateDirectoryBehaviors)
+
+  $('#behaviors-directory-middle')
+    .val(options.behaviors.directory.middle)
+    .change(updateDirectoryBehaviors)
+
+  $('#behaviors-directory-right')
+    .val(options.behaviors.directory.right)
+    .change(updateDirectoryBehaviors)

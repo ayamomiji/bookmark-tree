@@ -55,5 +55,26 @@
   },
   "openInNewWindow": {
     "message": "Open in new window"
+  },
+  "directoryBehavior": {
+    "message": "Directory behavior"
+  },
+  "behaviorsDirectoryLeft": {
+    "message": "When left-click..."
+  },
+  "behaviorsDirectoryMiddle": {
+    "message": "When middle-click..."
+  },
+  "behaviorsDirectoryRight": {
+    "message": "When right-click..."
+  },
+  "toggle": {
+    "message": "Toggle"
+  },
+  "openAllInCurrentWindow": {
+    "message": "Open all children in current window"
+  },
+  "openAllInNewWindow": {
+    "message": "Open all children in new window"
   }
 }

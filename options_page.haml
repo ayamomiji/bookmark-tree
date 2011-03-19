@@ -45,6 +45,27 @@
             %option(value='openInCurrentTab' data-i18n-key='openInCurrentTab')
             %option(value='openInBackgroundTab' data-i18n-key='openInBackgroundTab')
             %option(value='openInNewWindow' data-i18n-key='openInNewWindow')
+
+        %h3(data-i18n-key='directoryBehavior')
+        %div
+          %label(for='behaviors-directory-left' data-i18n-key='behaviorsDirectoryLeft')
+          %select#behaviors-directory-left
+            %option(value='toggle' data-i18n-key='toggle')
+            %option(value='openAllInCurrentWindow' data-i18n-key='openAllInCurrentWindow')
+            %option(value='openAllInNewWindow' data-i18n-key='openAllInNewWindow')
+        %div
+          %label(for='behaviors-directory-middle' data-i18n-key='behaviorsDirectoryMiddle')
+          %select#behaviors-directory-middle
+            %option(value='toggle' data-i18n-key='toggle')
+            %option(value='openAllInCurrentWindow' data-i18n-key='openAllInCurrentWindow')
+            %option(value='openAllInNewWindow' data-i18n-key='openAllInNewWindow')
+        %div
+          %label(for='behaviors-directory-right' data-i18n-key='behaviorsDirectoryRight')
+          %select#behaviors-directory-right
+            %option(value='toggle' data-i18n-key='toggle')
+            %option(value='openAllInCurrentWindow' data-i18n-key='openAllInCurrentWindow')
+            %option(value='openAllInNewWindow' data-i18n-key='openAllInNewWindow')
+
       %section
         %h2(data-i18n-key='misc')
 
