@@ -29,6 +29,10 @@ ul ul {
   height: 1.2em;
   cursor: pointer;
   overflow: hidden;
+
+  &:hover {
+    background-color: #ffa;
+  }
 }
 
 .directory {
