@@ -98,3 +98,7 @@ jQuery ($) ->
       chrome.tabs.create(url: node.url, selected: false)
     openInNewWindow: (node) ->
       chrome.windows.create(url: node.url)
+
+  $('.bookmark > .title').live 'mousemove', ->
+    id = $(this).parent().attr('data-id')
+    urlBar.text(treeData[id].url)

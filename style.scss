@@ -9,6 +9,14 @@ body {
   overflow-y: scroll;
 }
 
+#url {
+  border-top: 1px solid black;
+  line-height: 1em;
+  font-size: 1em;
+  height: 1em;
+  overflow: hidden;
+}
+
 ul ul {
   margin-left: 16px;
 }
