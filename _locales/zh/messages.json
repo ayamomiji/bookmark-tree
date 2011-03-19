@@ -101,5 +101,12 @@
   "shortcutsNotice": {
     "message": "快速鍵目前只能運作在讀取完畢的頁面中.
                 (Google 瀏覽器還未原生支援這項特性)"
+  },
+  "contact": {
+    "message": "聯絡作者"
+  },
+  "aboutMe": {
+    "message": "我是 ayaya, 台灣人.
+                我使用中文為主, 但您也可以用英文或日文聯絡我. :)"
   }
 }

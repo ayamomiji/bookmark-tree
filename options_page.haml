@@ -98,5 +98,21 @@
 
         %h3(data-i18n-key='rootDirectory')
         %select#root-directory
+
+        %h3(data-i18n-key='contact')
+        %p(data-i18n-key='aboutMe')
+        %dl
+          %dt Twitter
+          %dd
+            %a(href='http://twitter.com/ayahatate' target='blank') http://twitter.com/ayahatate
+          %dt Plurk
+          %dd
+            %a(href='http://www.plurk.com/ayamomiji' target='blank') http://www.plurk.com/ayamomiji
+          %dt GitHub
+          %dd
+            %a(href='https://github.com/ayamomiji' target='blank') https://github.com/ayamomiji
+          %dt Blog (Chinese Only)
+          %dd
+            %a(href='http://aya.idv.tw' target='blank') http://aya.idv.tw
     %script#option-tmpl(type='text/x-jquery-tmpl')
       %option(value='${value}') ${title}

@@ -101,5 +101,12 @@
   "shortcutsNotice": {
     "message": "Shortcuts are only worked in fully loaded pages for now.
                 (Google Chrome does not support this feature native yet)"
+  },
+  "contact": {
+    "message": "Contact author"
+  },
+  "aboutMe": {
+    "message": "I'm ayaya (aka frostchao), live in Taiwan.
+                I mainly use Chinese, but you can also use English or Japanese to contact me. :)"
   }
 }
