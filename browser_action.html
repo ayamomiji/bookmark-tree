@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title data-i18n-key='BookmarkTree'></title>
+    <link href='style.css' rel='stylesheet' type='text/css' />
+    <style type='text/css'></style>
+    <script src='jquery.js' type='text/javascript'></script>
+    <script src='jquery.tmpl.js' type='text/javascript'></script>
+    <script src='common.js' type='text/javascript'></script>
+    <script src='browser_action.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div id='tree'>
+      <ul></ul>
+    </div>
+    <div id='url'></div>
+    <script id='directory-tmpl' type='text/x-jquery-tmpl'>
+      <div class='node directory' data-id='${id}'>
+        <div class='title' title='${title}'>
+          <img class='favicon' src='close.png' />
+          <span class='link'>${title}</span>
+        </div>
+        <ul class='children'></ul>
+      </div>
+    </script>
+    <script id='bookmark-tmpl' type='text/x-jquery-tmpl'>
+      <div class='node bookmark' data-id='${id}'>
+        <div class='title' title='${title}'>
+          <img class='favicon' src='chrome://favicon/${url}' />
+          <span class='link'>${title}</span>
+        </div>
+      </div>
+    </script>
+  </body>
+</html>
