@@ -28,5 +28,8 @@
   },
   "rootDirectory": {
     "message": "Root directory"
+  },
+  "rememberOpenedDirectory": {
+    "message": "Remember opened directory"
   }
 }

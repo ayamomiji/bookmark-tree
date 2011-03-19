@@ -10,5 +10,6 @@ jQuery ($) ->
     width: parseInt(localStorage.width) || 300
     height: parseInt(localStorage.height) || 400
     rootDirectory: localStorage.rootDirectory || '0'
+    rememberOpenedDirectory: localStorage.rememberOpenedDirectory == 'true'
 
   window.delay = (callback) -> setTimeout(callback, 10)

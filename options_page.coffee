@@ -22,3 +22,8 @@ jQuery ($) ->
       .val(options.rootDirectory)
       .change ->
         delay => localStorage.rootDirectory = this.value
+
+  $('#remember-opened-directory')
+    .attr('checked', options.rememberOpenedDirectory)
+    .change ->
+      delay => localStorage.rememberOpenedDirectory = this.checked

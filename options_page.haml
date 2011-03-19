@@ -25,6 +25,10 @@
       %section
         %h2(data-i18n-key='misc')
 
+        %div
+          %input#remember-opened-directory(type='checkbox' value='on')
+          %label(for='remember-opened-directory' data-i18n-key='rememberOpenedDirectory')
+
         %h3(data-i18n-key='rootDirectory')
         %select#root-directory
           %script#root-directory-option-tmpl(type='text/x-jquery-tmpl')

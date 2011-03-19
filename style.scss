@@ -22,3 +22,13 @@ ul ul {
   cursor: pointer;
   overflow: hidden;
 }
+
+.directory {
+  > ul.children {
+    display: none;
+  }
+
+  &.open > ul.children {
+    display: block;
+  }
+}

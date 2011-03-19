@@ -7,6 +7,7 @@ jQuery ($) ->
   tmpl =
     bookmark: $('#bookmark-tmpl')
     directory: $('#directory-tmpl')
+  openingDirectory = JSON.parse(localStorage.openingDirectory || '{}')
 
   $('body').width(options.width)
   $('#tree').height(options.height)
@@ -33,10 +34,43 @@ jQuery ($) ->
 
   buildDirectory = (node) ->
     elem = tmpl.directory.tmpl(node)
-    children = elem.find('.children:first')
-    node.children.forEach (child) ->
-      children.append $('<li></li>').append(buildNode(child))
+    if openingDirectory[node.id]
+      openDirectory(elem)
     elem
 
   buildBookmark = (node) ->
     tmpl.bookmark.tmpl(node)
+
+  openDirectory = (elem) ->
+    id = elem.attr('data-id')
+    node = treeData[id]
+    elem.addClass('open')
+    elem.find('.title .favicon:first').attr('src', 'open.png')
+    children = elem.find('.children:first')
+    if children.find('li').size() == 0
+      node.children.forEach (child) ->
+        children.append $('<li></li>').append(buildNode(child))
+
+    if options.rememberOpenedDirectory
+      openingDirectory[id] = true
+      localStorage.openingDirectory = JSON.stringify(openingDirectory)
+
+  closeDirectory = (elem) ->
+    id = elem.attr('data-id')
+    elem.removeClass('open')
+    elem.find('.title .favicon:first').attr('src', 'close.png')
+    if options.rememberOpenedDirectory
+      openingDirectory[id] = null
+      localStorage.openingDirectory = JSON.stringify(openingDirectory)
+
+  $('.directory > .title').live 'click', ->
+    self = $(this)
+    directory = self.parent()
+    toggleDirectory(directory)
+
+  toggleDirectory = (elem) ->
+    id = elem.attr('data-id')
+    if elem.hasClass('open')
+      closeDirectory(elem)
+    else
+      openDirectory(elem)

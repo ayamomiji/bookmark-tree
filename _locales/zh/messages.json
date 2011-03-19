@@ -28,5 +28,8 @@
   },
   "rootDirectory": {
     "message": "根目錄"
+  },
+  "rememberOpenedDirectory": {
+    "message": "記住開啟的目錄"
   }
 }
