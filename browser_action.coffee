@@ -14,7 +14,7 @@ jQuery ($) ->
   $('#tree').css('max-height', options.height)
 
   chrome.bookmarks.getTree (nodes) ->
-    rootId = localStorage.rootDirectory
+    rootId = options.rootDirectory
     while node = nodes.pop()
       treeData[node.id] = node
       nodes.push(child) for child in node.children if node.children
