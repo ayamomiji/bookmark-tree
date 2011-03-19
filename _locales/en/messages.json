@@ -16,5 +16,14 @@
   },
   "misc": {
     "message": "Miscellaneous"
+  },
+  "size": {
+    "message": "Size"
+  },
+  "width": {
+    "message": "Width"
+  },
+  "height": {
+    "message": "Height"
   }
 }

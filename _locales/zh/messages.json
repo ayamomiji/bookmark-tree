@@ -16,5 +16,14 @@
   },
   "misc": {
     "message": "雜項"
+  },
+  "size": {
+    "message": "大小"
+  },
+  "width": {
+    "message": "寬"
+  },
+  "height": {
+    "message": "高"
   }
 }
