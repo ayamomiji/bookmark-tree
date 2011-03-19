@@ -7,5 +7,14 @@
   },
   "options_page": {
     "message": "Options page for Bookmark Tree"
+  },
+  "appearance": {
+    "message": "Appearance"
+  },
+  "behavior": {
+    "message": "Behavior"
+  },
+  "misc": {
+    "message": "Miscellaneous"
   }
 }

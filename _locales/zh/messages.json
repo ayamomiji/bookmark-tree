@@ -7,5 +7,14 @@
   },
   "options_page": {
     "message": "書籤樹設定選項"
+  },
+  "appearance": {
+    "message": "外觀"
+  },
+  "behavior": {
+    "message": "行為"
+  },
+  "misc": {
+    "message": "雜項"
   }
 }
