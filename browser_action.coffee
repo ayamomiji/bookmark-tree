@@ -8,9 +8,9 @@ jQuery ($) ->
     bookmark: $('#bookmark-tmpl')
     directory: $('#directory-tmpl')
 
-  $('body').width(300)
-  $('#tree').height(400)
-  $('#tree').css('max-height', 400)
+  $('body').width(options.width)
+  $('#tree').height(options.height)
+  $('#tree').css('max-height', options.height)
 
   chrome.bookmarks.getTree (nodes) ->
     rootId = 0

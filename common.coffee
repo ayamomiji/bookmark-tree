@@ -5,3 +5,9 @@ jQuery ($) ->
     method = elem.attr('data-i18n-method') || 'text'
     translated = chrome.i18n.getMessage(key)
     elem[method](translated || "translation missing: #{key}")
+
+  window.options =
+    width: parseInt(localStorage.width) || 300
+    height: parseInt(localStorage.height) || 400
+
+  window.delay = (callback) -> setTimeout(callback, 10)
