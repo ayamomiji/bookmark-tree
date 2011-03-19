@@ -20,8 +20,8 @@ jQuery ($) ->
       nodes.push(child) for child in node.children if node.children
 
     treeData[0].title = '(root)'
-
-    tree.find('ul:first').append $('<li></li>').append(buildDirectory(treeData[rootId]))
+    treeData[rootId].children.forEach (child) ->
+      tree.find('ul:first').append $('<li></li>').append(buildDirectory(child))
 
     spentTime = new Date().getTime() - startTime
     urlBar.text("Spent time: #{spentTime} ms.")
