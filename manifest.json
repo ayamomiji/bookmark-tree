@@ -1,0 +1,22 @@
+{
+  "name": "__MSG_BookmarkTree__",
+  "default_locale": "en",
+  "version": "0.3.0",
+  "description": "__MSG_Description__",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "__MSG_BookmarkTree__",
+    "popup": "browser_action.html"
+  },
+  "background_page": "background_page.html",
+  "options_page": "options_page.html",
+  "permissions": [
+    "http://*/*",
+    "chrome://favicon/",
+    "bookmarks",
+    "tabs"
+  ]
+}
