@@ -4,5 +4,8 @@
   },
   "Description": {
     "message": "Provides a button to show bookmark tree and open bookmark in new tab."
+  },
+  "options_page": {
+    "message": "Options page for Bookmark Tree"
   }
 }
