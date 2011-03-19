@@ -70,6 +70,25 @@
             %option(value='openAllInCurrentWindow' data-i18n-key='openAllInCurrentWindow')
             %option(value='openAllInNewWindow' data-i18n-key='openAllInNewWindow')
 
+        %h3(data-i18n-key='shortcuts')
+        %div
+          %span(data-i18n-key='openBookmarkTreeInNewTab')
+          %select#open-bookmark-tree-in-new-tab-modifier
+            %option(value='ctrl' data-i18n-key='ctrl')
+            %option(value='alt' data-i18n-key='alt')
+            %option(value='meta' data-i18n-key='meta')
+          +
+          %select#open-bookmark-tree-in-new-tab-key
+        %div
+          %span(data-i18n-key='openBookmarkTreeInNewWindow')
+          %select#open-bookmark-tree-in-new-window-modifier
+            %option(value='ctrl' data-i18n-key='ctrl')
+            %option(value='alt' data-i18n-key='alt')
+            %option(value='meta' data-i18n-key='meta')
+          +
+          %select#open-bookmark-tree-in-new-window-key
+        %p(data-i18n-key='shortcutsNotice')
+
       %section
         %h2(data-i18n-key='misc')
 

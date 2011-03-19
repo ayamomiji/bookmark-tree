@@ -7,6 +7,7 @@ jQuery ($) ->
     elem[method](translated || "translation missing: #{key}")
 
   behaviors = JSON.parse(localStorage.behaviors || '{}')
+  shortcuts = JSON.parse(localStorage.shortcuts || '{}')
   window.options =
     width: parseInt(localStorage.width) || 300
     height: parseInt(localStorage.height) || 400
@@ -22,5 +23,12 @@ jQuery ($) ->
         middle: behaviors.directory?.middle || 'openAllInCurrentWindow'
         right:  behaviors.directory?.right  || 'openAllInNewWindow'
     customStyle: localStorage.customStyle || ''
+    shortcuts:
+      openBookmarkTreeInNewTab:
+        modifier: shortcuts.openBookmarkTreeInNewTab?.modifier || 'alt'
+        key: shortcuts.openBookmarkTreeInNewTab?.key || 'b'
+      openBookmarkTreeInNewWindow:
+        modifier: shortcuts.openBookmarkTreeInNewWindow?.modifier || 'alt'
+        key: shortcuts.openBookmarkTreeInNewWindow?.key || 'w'
 
   window.delay = (callback) -> setTimeout(callback, 10)

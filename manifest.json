@@ -11,6 +11,12 @@
     "default_title": "__MSG_BookmarkTree__",
     "popup": "browser_action.html"
   },
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*" ],
+      "js": [ "content.js" ]
+    }
+  ],
   "background_page": "background_page.html",
   "options_page": "options_page.html",
   "permissions": [

@@ -1,4 +1,6 @@
 jQuery ($) ->
+  tmpl = $('#option-tmpl')
+
   $('#width')
     .val(options.width)
     .bind 'change keypress mousewheel', ->
@@ -11,7 +13,6 @@ jQuery ($) ->
 
   chrome.bookmarks.getTree (nodes) ->
     rootDirectory = $('#root-directory')
-    tmpl = $('#option-tmpl')
     while node = nodes.pop()
       if node.children
         nodes.push(child) for child in node.children if node.children
@@ -72,3 +73,38 @@ jQuery ($) ->
     .val(options.customStyle)
     .bind 'change keypress mousewheel', ->
       delay => localStorage.customStyle = this.value
+
+  keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+  [0...keys.length].forEach (i) ->
+    $('#open-bookmark-tree-in-new-tab-key').append tmpl.tmpl
+      value: keys.charAt(i).toLowerCase()
+      title: keys.charAt(i)
+    $('#open-bookmark-tree-in-new-window-key').append tmpl.tmpl
+      value: keys.charAt(i).toLowerCase()
+      title: keys.charAt(i)
+
+  updateShortcuts = ->
+    shortcuts = JSON.parse(localStorage.shortcuts || '{}')
+    shortcuts.openBookmarkTreeInNewTab =
+      modifier: $('#open-bookmark-tree-in-new-tab-modifier').val()
+      key: $('#open-bookmark-tree-in-new-tab-key').val()
+    shortcuts.openBookmarkTreeInNewWindow =
+      modifier: $('#open-bookmark-tree-in-new-window-modifier').val()
+      key: $('#open-bookmark-tree-in-new-window-key').val()
+    localStorage.shortcuts = JSON.stringify(shortcuts)
+
+  $('#open-bookmark-tree-in-new-tab-modifier')
+    .val(options.shortcuts.openBookmarkTreeInNewTab.modifier)
+    .change(updateShortcuts)
+
+  $('#open-bookmark-tree-in-new-tab-key')
+    .val(options.shortcuts.openBookmarkTreeInNewTab.key)
+    .change(updateShortcuts)
+
+  $('#open-bookmark-tree-in-new-window-modifier')
+    .val(options.shortcuts.openBookmarkTreeInNewWindow.modifier)
+    .change(updateShortcuts)
+
+  $('#open-bookmark-tree-in-new-window-key')
+    .val(options.shortcuts.openBookmarkTreeInNewWindow.key)
+    .change(updateShortcuts)

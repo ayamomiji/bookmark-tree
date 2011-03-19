@@ -9,9 +9,13 @@ jQuery ($) ->
     directory: $('#directory-tmpl')
   openingDirectory = JSON.parse(localStorage.openingDirectory || '{}')
 
-  $('body').width(options.width)
-  $('#tree').height(options.height)
-  $('#tree').css('max-height', options.height)
+  if location.search != '?full'
+    $('body').width(options.width)
+    $('#tree').height(options.height)
+    $('#tree').css('max-height', options.height)
+  else
+    $('#url').css(position: 'fixed', width: '100%', bottom: 0)
+    $('#tree').css(position: 'fixed', top: 0, bottom: '1em', left: 0, right: 0)
 
   chrome.bookmarks.getTree (nodes) ->
     rootId = options.rootDirectory

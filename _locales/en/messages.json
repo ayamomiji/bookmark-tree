@@ -79,5 +79,27 @@
   },
   "customStyle": {
     "message": "Custom style"
+  },
+  "shortcuts": {
+    "message": "Shortcuts"
+  },
+  "openBookmarkTreeInNewTab": {
+    "message": "Open BookmarkTree in new tab"
+  },
+  "openBookmarkTreeInNewWindow": {
+    "message": "Open BookmarkTree in new window"
+  },
+  "ctrl": {
+    "message": "Ctrl"
+  },
+  "alt": {
+    "message": "Alt"
+  },
+  "meta": {
+    "message": "Meta"
+  },
+  "shortcutsNotice": {
+    "message": "Shortcuts are only worked in fully loaded pages for now.
+                (Google Chrome does not support this feature native yet)"
   }
 }
