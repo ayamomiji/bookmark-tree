@@ -22,6 +22,29 @@
 
       %section
         %h2(data-i18n-key='behavior')
+
+        %h3(data-i18n-key='bookmarkBehavior')
+        %div
+          %label(for='behaviors-bookmark-left' data-i18n-key='behaviorsBookmarkLeft')
+          %select#behaviors-bookmark-left
+            %option(value='openInNewTab' data-i18n-key='openInNewTab')
+            %option(value='openInCurrentTab' data-i18n-key='openInCurrentTab')
+            %option(value='openInBackgroundTab' data-i18n-key='openInBackgroundTab')
+            %option(value='openInNewWindow' data-i18n-key='openInNewWindow')
+        %div
+          %label(for='behaviors-bookmark-middle' data-i18n-key='behaviorsBookmarkMiddle')
+          %select#behaviors-bookmark-middle
+            %option(value='openInNewTab' data-i18n-key='openInNewTab')
+            %option(value='openInCurrentTab' data-i18n-key='openInCurrentTab')
+            %option(value='openInBackgroundTab' data-i18n-key='openInBackgroundTab')
+            %option(value='openInNewWindow' data-i18n-key='openInNewWindow')
+        %div
+          %label(for='behaviors-bookmark-right' data-i18n-key='behaviorsBookmarkRight')
+          %select#behaviors-bookmark-right
+            %option(value='openInNewTab' data-i18n-key='openInNewTab')
+            %option(value='openInCurrentTab' data-i18n-key='openInCurrentTab')
+            %option(value='openInBackgroundTab' data-i18n-key='openInBackgroundTab')
+            %option(value='openInNewWindow' data-i18n-key='openInNewWindow')
       %section
         %h2(data-i18n-key='misc')
 
@@ -31,5 +54,5 @@
 
         %h3(data-i18n-key='rootDirectory')
         %select#root-directory
-          %script#root-directory-option-tmpl(type='text/x-jquery-tmpl')
-            %option(value='${id}') ${title}
+    %script#option-tmpl(type='text/x-jquery-tmpl')
+      %option(value='${value}') ${title}

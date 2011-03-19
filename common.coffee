@@ -6,10 +6,16 @@ jQuery ($) ->
     translated = chrome.i18n.getMessage(key)
     elem[method](translated || "translation missing: #{key}")
 
+  behaviors = JSON.parse(localStorage.behaviors || '{}')
   window.options =
     width: parseInt(localStorage.width) || 300
     height: parseInt(localStorage.height) || 400
     rootDirectory: localStorage.rootDirectory || '0'
     rememberOpenedDirectory: localStorage.rememberOpenedDirectory == 'true'
+    behaviors:
+      bookmark:
+        left:   behaviors.bookmark?.left   || 'openInNewTab'
+        middle: behaviors.bookmark?.middle || 'openInCurrentTab'
+        right:  behaviors.bookmark?.right  || 'openInBackgroundTab'
 
   window.delay = (callback) -> setTimeout(callback, 10)

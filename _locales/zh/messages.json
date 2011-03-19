@@ -31,5 +31,29 @@
   },
   "rememberOpenedDirectory": {
     "message": "記住開啟的目錄"
+  },
+  "bookmarkBehavior": {
+    "message": "書籤行為"
+  },
+  "behaviorsBookmarkLeft": {
+    "message": "當按下左鍵時..."
+  },
+  "behaviorsBookmarkMiddle": {
+    "message": "當按下中鍵時..."
+  },
+  "behaviorsBookmarkRight": {
+    "message": "當按下右鍵時..."
+  },
+  "openInNewTab": {
+    "message": "開啟於新分頁"
+  },
+  "openInCurrentTab": {
+    "message": "開啟於目前分頁"
+  },
+  "openInBackgroundTab": {
+    "message": "開啟於背景新分頁"
+  },
+  "openInNewWindow": {
+    "message": "開啟於新視窗"
   }
 }

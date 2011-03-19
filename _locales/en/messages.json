@@ -31,5 +31,29 @@
   },
   "rememberOpenedDirectory": {
     "message": "Remember opened directory"
+  },
+  "bookmarkBehavior": {
+    "message": "Bookmark behavior"
+  },
+  "behaviorsBookmarkLeft": {
+    "message": "When left-click..."
+  },
+  "behaviorsBookmarkMiddle": {
+    "message": "When middle-click..."
+  },
+  "behaviorsBookmarkRight": {
+    "message": "When right-click..."
+  },
+  "openInNewTab": {
+    "message": "Open in new tab"
+  },
+  "openInCurrentTab": {
+    "message": "Open in current tab"
+  },
+  "openInBackgroundTab": {
+    "message": "Open in background tab"
+  },
+  "openInNewWindow": {
+    "message": "Open in new window"
   }
 }

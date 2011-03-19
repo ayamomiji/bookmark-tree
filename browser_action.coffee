@@ -74,3 +74,27 @@ jQuery ($) ->
       closeDirectory(elem)
     else
       openDirectory(elem)
+
+  $('.bookmark > .title').live 'mouseup', (e) ->
+    self = $(this)
+    bookmark = self.parent()
+    id = bookmark.attr('data-id')
+    node = treeData[id]
+    switch e.button
+      when 0 # left
+        bookmarkBehaviors[options.behaviors.bookmark.left](node)
+      when 1 # middle
+        bookmarkBehaviors[options.behaviors.bookmark.middle](node)
+      when 2 # right
+        bookmarkBehaviors[options.behaviors.bookmark.right](node)
+
+  bookmarkBehaviors =
+    openInNewTab: (node) ->
+      chrome.tabs.create(url: node.url)
+    openInCurrentTab: (node) ->
+      chrome.tabs.getSelected null, (tab) ->
+        chrome.tabs.update(tab.id, url: node.url)
+    openInBackgroundTab: (node) ->
+      chrome.tabs.create(url: node.url, selected: false)
+    openInNewWindow: (node) ->
+      chrome.windows.create(url: node.url)
