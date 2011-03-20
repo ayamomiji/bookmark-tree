@@ -26,6 +26,18 @@
   "height": {
     "message": "高"
   },
+  "font": {
+    "message": "字型"
+  },
+  "fontFace": {
+    "message": "字體"
+  },
+  "fontSize": {
+    "message": "大小"
+  },
+  "fontSizeTips": {
+    "message": "提示: 你可以使用 px, em, pt, 或 % 做為單位."
+  },
   "customStyle": {
     "message": "自訂樣式"
   },

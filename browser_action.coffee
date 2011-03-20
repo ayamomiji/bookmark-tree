@@ -128,4 +128,5 @@ jQuery ($) ->
     id = $(this).parent().attr('data-id')
     urlBar.text(treeData[id].url)
 
+  $('body').css(fontFamily: options.font.fontFace, fontSize: options.font.fontSize)
   $('style').html(options.customStyle)

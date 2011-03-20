@@ -26,6 +26,18 @@
   "height": {
     "message": "Height"
   },
+  "font": {
+    "message": "Font"
+  },
+  "fontFace": {
+    "message": "Font face"
+  },
+  "fontSize": {
+    "message": "Font size"
+  },
+  "fontSizeTips": {
+    "message": "Tips: you can use px, em, pt, or % as unit."
+  },
   "customStyle": {
     "message": "Custom style"
   },

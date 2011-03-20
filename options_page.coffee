@@ -11,6 +11,22 @@ jQuery ($) ->
     .bind 'change keypress mousewheel', ->
       delay => localStorage.height = parseInt(this.value)
 
+  updateFont = ->
+    font = JSON.parse(localStorage.font || '{}')
+    font.fontFace = $('#font-face').val()
+    font.fontSize = $('#font-size').val()
+    localStorage.font = JSON.stringify(font)
+
+  $('#font-face')
+    .val(options.font.fontFace)
+    .bind 'change keypress', ->
+      delay -> updateFont()
+
+  $('#font-size')
+    .val(options.font.fontSize)
+    .bind 'change keypress', ->
+      delay -> updateFont()
+
   chrome.bookmarks.getTree (nodes) ->
     rootDirectory = $('#root-directory')
     while node = nodes.pop()
