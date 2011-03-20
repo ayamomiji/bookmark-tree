@@ -9,6 +9,11 @@ Future
 * Bookmarklet support
 * Keyboard support
 
+0.4.1 (2011/03/20)
+------------------
+
+* Change a colorful icon
+
 0.4.0 (2011/03/20)
 ------------------
 
