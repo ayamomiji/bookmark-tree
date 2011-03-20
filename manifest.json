@@ -1,7 +1,7 @@
 {
   "name": "__MSG_BookmarkTree__",
   "default_locale": "en",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "__MSG_Description__",
   "icons": {
     "128": "icon.png"
