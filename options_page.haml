@@ -72,6 +72,9 @@
 
         %h3(data-i18n-key='shortcuts')
         %div
+          %input#disable-shortcuts(type='checkbox' value='on')
+          %label(for='disable-shortcuts' data-i18n-key='disableShortcuts')
+        %div
           %span(data-i18n-key='openBookmarkTreeInNewTab')
           %select#open-bookmark-tree-in-new-tab-modifier
             %option(value='ctrl' data-i18n-key='ctrl')

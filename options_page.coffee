@@ -85,6 +85,7 @@ jQuery ($) ->
 
   updateShortcuts = ->
     shortcuts = JSON.parse(localStorage.shortcuts || '{}')
+    shortcuts.disable = $('#disable-shortcuts').attr('checked')
     shortcuts.openBookmarkTreeInNewTab =
       modifier: $('#open-bookmark-tree-in-new-tab-modifier').val()
       key: $('#open-bookmark-tree-in-new-tab-key').val()
@@ -92,6 +93,10 @@ jQuery ($) ->
       modifier: $('#open-bookmark-tree-in-new-window-modifier').val()
       key: $('#open-bookmark-tree-in-new-window-key').val()
     localStorage.shortcuts = JSON.stringify(shortcuts)
+
+  $('#disable-shortcuts')
+    .attr('checked', !!options.shortcuts.disable)
+    .change(updateShortcuts)
 
   $('#open-bookmark-tree-in-new-tab-modifier')
     .val(options.shortcuts.openBookmarkTreeInNewTab.modifier)

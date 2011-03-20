@@ -108,5 +108,8 @@
   "aboutMe": {
     "message": "我是 ayaya, 台灣人.
                 我使用中文為主, 但您也可以用英文或日文聯絡我. :)"
+  },
+  "disableShortcuts": {
+    "message": "禁用快速鍵"
   }
 }

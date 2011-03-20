@@ -7,6 +7,7 @@ chrome.extension.onRequest.addListener (req, sender, callback) ->
           chrome.tabs.create(url: child.url, windowId: window.id, selected: false)
     when 'keydown'
       shortcuts = JSON.parse(localStorage.shortcuts || '{}')
+      return if shortcuts.disable
 
       mod = shortcuts.openBookmarkTreeInNewTab?.modifier || 'alt'
       key = shortcuts.openBookmarkTreeInNewTab?.key || 'b'

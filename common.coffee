@@ -24,6 +24,7 @@ jQuery ($) ->
         right:  behaviors.directory?.right  || 'openAllInNewWindow'
     customStyle: localStorage.customStyle || ''
     shortcuts:
+      disable: shortcuts.disable
       openBookmarkTreeInNewTab:
         modifier: shortcuts.openBookmarkTreeInNewTab?.modifier || 'alt'
         key: shortcuts.openBookmarkTreeInNewTab?.key || 'b'

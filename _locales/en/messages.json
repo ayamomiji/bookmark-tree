@@ -108,5 +108,8 @@
   "aboutMe": {
     "message": "I'm ayaya (aka frostchao), live in Taiwan.
                 I mainly use Chinese, but you can also use English or Japanese to contact me. :)"
+  },
+  "disableShortcuts": {
+    "message": "Disable shortcuts"
   }
 }
