@@ -9,6 +9,12 @@ Future
 * Bookmarklet support
 * Keyboard support
 
+0.4.0 (2011/03/20)
+------------------
+
+* Make HTML more cleaner
+* Add how to make a theme in README
+
 0.3.0 (2011/03/20)
 ------------------
 
