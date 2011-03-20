@@ -25,7 +25,7 @@ jQuery ($) ->
 
     treeData[0].title = '(root)'
     treeData[rootId].children.forEach (child) ->
-      tree.find('ul:first').append $('<li></li>').append(buildNode(child))
+      tree.find('ul:first').append buildNode(child)
 
     spentTime = new Date().getTime() - startTime
     urlBar.text("Spent time: #{spentTime} ms.")
@@ -53,7 +53,7 @@ jQuery ($) ->
     children = elem.find('.children:first')
     if children.find('li').size() == 0
       node.children.forEach (child) ->
-        children.append $('<li></li>').append(buildNode(child))
+        children.append buildNode(child)
 
     if options.rememberOpenedDirectory
       openingDirectory[id] = true
