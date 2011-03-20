@@ -26,11 +26,8 @@
   "height": {
     "message": "Height"
   },
-  "rootDirectory": {
-    "message": "Root directory"
-  },
-  "rememberOpenedDirectory": {
-    "message": "Remember opened directory"
+  "customStyle": {
+    "message": "Custom style"
   },
   "bookmarkBehavior": {
     "message": "Bookmark behavior"
@@ -77,11 +74,11 @@
   "openAllInNewWindow": {
     "message": "Open all children in new window"
   },
-  "customStyle": {
-    "message": "Custom style"
-  },
   "shortcuts": {
     "message": "Shortcuts"
+  },
+  "disableShortcuts": {
+    "message": "Disable shortcuts"
   },
   "openBookmarkTreeInNewTab": {
     "message": "Open BookmarkTree in new tab"
@@ -102,14 +99,17 @@
     "message": "Shortcuts are only worked in fully loaded pages for now.
                 (Google Chrome does not support this feature native yet)"
   },
+  "rememberOpenedDirectory": {
+    "message": "Remember opened directory"
+  },
+  "rootDirectory": {
+    "message": "Root directory"
+  },
   "contact": {
     "message": "Contact author"
   },
   "aboutMe": {
     "message": "I'm ayaya (aka frostchao), live in Taiwan.
                 I mainly use Chinese, but you can also use English or Japanese to contact me. :)"
-  },
-  "disableShortcuts": {
-    "message": "Disable shortcuts"
   }
 }

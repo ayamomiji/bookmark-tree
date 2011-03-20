@@ -26,11 +26,8 @@
   "height": {
     "message": "高"
   },
-  "rootDirectory": {
-    "message": "根目錄"
-  },
-  "rememberOpenedDirectory": {
-    "message": "記住開啟的目錄"
+  "customStyle": {
+    "message": "自訂樣式"
   },
   "bookmarkBehavior": {
     "message": "書籤行為"
@@ -77,11 +74,11 @@
   "openAllInNewWindow": {
     "message": "開啟所有書籤於新視窗"
   },
-  "customStyle": {
-    "message": "自訂樣式"
-  },
   "shortcuts": {
     "message": "快速鍵"
+  },
+  "disableShortcuts": {
+    "message": "禁用快速鍵"
   },
   "openBookmarkTreeInNewTab": {
     "message": "開啟書籤樹於新分頁"
@@ -102,14 +99,17 @@
     "message": "快速鍵目前只能運作在讀取完畢的頁面中.
                 (Google 瀏覽器還未原生支援這項特性)"
   },
+  "rememberOpenedDirectory": {
+    "message": "記住開啟的目錄"
+  },
+  "rootDirectory": {
+    "message": "根目錄"
+  },
   "contact": {
     "message": "聯絡作者"
   },
   "aboutMe": {
     "message": "我是 ayaya, 台灣人.
                 我使用中文為主, 但您也可以用英文或日文聯絡我. :)"
-  },
-  "disableShortcuts": {
-    "message": "禁用快速鍵"
   }
 }
