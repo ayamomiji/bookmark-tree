@@ -24,3 +24,7 @@
         .title(title='${title}')
           %img.favicon(src='chrome://favicon/${url}')
           %span.link ${title}
+    %script#icon-tmpl(type='text/x-jquery-tmpl')
+      %li.node.icon(data-id='${id}')
+        .title(title='${url}')
+          %img.favicon(src='chrome://favicon/${url}')

@@ -6,6 +6,7 @@ jQuery ($) ->
   treeData = {}
   tmpl =
     bookmark: $('#bookmark-tmpl')
+    icon: $('#icon-tmpl')
     directory: $('#directory-tmpl')
   openingDirectory = JSON.parse(localStorage.openingDirectory || '{}')
 
@@ -34,7 +35,10 @@ jQuery ($) ->
     if node.children
       buildDirectory(node)
     else
-      buildBookmark(node)
+      if node.title == ''
+        buildIcon(node)
+      else
+        buildBookmark(node)
 
   buildDirectory = (node) ->
     elem = tmpl.directory.tmpl(node)
@@ -44,6 +48,9 @@ jQuery ($) ->
 
   buildBookmark = (node) ->
     tmpl.bookmark.tmpl(node)
+
+  buildIcon = (node) ->
+    tmpl.icon.tmpl(node)
 
   openDirectory = (elem) ->
     id = elem.attr('data-id')
@@ -93,7 +100,7 @@ jQuery ($) ->
     openAllInNewWindow: (node) ->
       chrome.extension.sendRequest(type: 'openAllInNewWindow', directory: node)
 
-  $('.bookmark > .title').live 'mouseup', (e) ->
+  $('.bookmark > .title, .icon > .title').live 'mouseup', (e) ->
     self = $(this)
     bookmark = self.parent()
     id = bookmark.attr('data-id')

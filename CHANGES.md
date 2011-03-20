@@ -14,6 +14,7 @@ Future
 
 * Make HTML more cleaner
 * Add how to make a theme in README
+* Bookmark without title will display as an icon link
 
 0.3.0 (2011/03/20)
 ------------------
