@@ -18,6 +18,10 @@ jQuery ($) ->
     $('#url').css(position: 'fixed', width: '100%', bottom: 0)
     $('#tree').css(position: 'fixed', top: 0, bottom: '1em', left: 0, right: 0)
 
+  $(window).resize ->
+    border = $('#tree').outerWidth() - $('#tree').innerWidth()
+    $('#tree').width($(window).width() - border)
+
   chrome.bookmarks.getTree (nodes) ->
     rootId = options.rootDirectory
     while node = nodes.pop()

@@ -18,6 +18,7 @@ Future
 * Sorting like v0.2.x series.
 * Enable/disable scrollbar (default is enable)
 * Enable/disable close popup after open bookmark (default is disable)
+* Fix wrong width when zoomed-in options page (thanks Paul)
 
 0.4.0 (2011/03/20)
 ------------------
