@@ -114,6 +114,9 @@
   "rememberOpenedDirectory": {
     "message": "Remember opened directory"
   },
+  "hideScrollbar": {
+    "message": "Hide scrollbar"
+  },
   "rootDirectory": {
     "message": "Root directory"
   },

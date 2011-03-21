@@ -114,6 +114,9 @@
   "rememberOpenedDirectory": {
     "message": "記住開啟的目錄"
   },
+  "hideScrollbar": {
+    "message": "隱藏捲軸"
+  },
   "rootDirectory": {
     "message": "根目錄"
   },
