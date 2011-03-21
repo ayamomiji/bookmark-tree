@@ -35,6 +35,7 @@ jQuery ($) ->
         key: shortcuts.openBookmarkTreeInNewWindow?.key || 'w'
     rememberOpenedDirectory: localStorage.rememberOpenedDirectory == 'true'
     hideScrollbar: localStorage.hideScrollbar == 'true'
+    closePopupAfterOpenBookmark: localStorage.closePopupAfterOpenBookmark == 'true'
     sortBy: localStorage.sortBy || 'index'
     rootDirectory: localStorage.rootDirectory || '0'
 

@@ -117,6 +117,9 @@
   "hideScrollbar": {
     "message": "Hide scrollbar"
   },
+  "closePopupAfterOpenBookmark": {
+    "message": "Close popup after open bookmark"
+  },
   "rootDirectory": {
     "message": "Root directory"
   },

@@ -135,6 +135,11 @@ jQuery ($) ->
     .change ->
       delay => localStorage.hideScrollbar = this.checked
 
+  $('#close-popup-after-open-bookmark')
+    .attr('checked', options.closePopupAfterOpenBookmark)
+    .change ->
+      delay => localStorage.closePopupAfterOpenBookmark = this.checked
+
   $('#sort-by')
     .val(options.sortBy)
     .change ->

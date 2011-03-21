@@ -105,8 +105,10 @@ jQuery ($) ->
     openAllInCurrentWindow: (node) ->
       treeData[node.id].children.forEach (child) ->
         chrome.tabs.create(url: child.url)
+      window.close() if options.closePopupAfterOpenBookmark
     openAllInNewWindow: (node) ->
       chrome.extension.sendRequest(type: 'openAllInNewWindow', directory: node)
+      window.close() if options.closePopupAfterOpenBookmark
 
   $('.bookmark > .title, .icon > .title').live 'mouseup', (e) ->
     self = $(this)
@@ -124,13 +126,17 @@ jQuery ($) ->
   bookmarkBehaviors =
     openInNewTab: (node) ->
       chrome.tabs.create(url: node.url)
+      window.close() if options.closePopupAfterOpenBookmark
     openInCurrentTab: (node) ->
       chrome.tabs.getSelected null, (tab) ->
         chrome.tabs.update(tab.id, url: node.url)
+      window.close() if options.closePopupAfterOpenBookmark
     openInBackgroundTab: (node) ->
       chrome.tabs.create(url: node.url, selected: false)
+      window.close() if options.closePopupAfterOpenBookmark
     openInNewWindow: (node) ->
       chrome.windows.create(url: node.url)
+      window.close() if options.closePopupAfterOpenBookmark
 
   $('.bookmark > .title').live 'mousemove', ->
     id = $(this).parent().attr('data-id')

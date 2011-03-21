@@ -117,6 +117,9 @@
   "hideScrollbar": {
     "message": "隱藏捲軸"
   },
+  "closePopupAfterOpenBookmark": {
+    "message": "開啟視窗後關閉彈出視窗"
+  },
   "rootDirectory": {
     "message": "根目錄"
   },
