@@ -130,6 +130,11 @@ jQuery ($) ->
     .val(options.shortcuts.openBookmarkTreeInNewWindow.key)
     .change(updateShortcuts)
 
+  $('#hide-scrollbar')
+    .attr('checked', options.hideScrollbar)
+    .change ->
+      delay => localStorage.hideScrollbar = this.checked
+
   $('#sort-by')
     .val(options.sortBy)
     .change ->

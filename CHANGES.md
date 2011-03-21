@@ -9,13 +9,14 @@ Future
 * Bookmarklet support
 * Keyboard support
 
-0.5.0 (2011/03/20)
+0.5.0 (2011/03/21)
 ------------------
 
 * Change a colorful icon
 * Enable/Disable shortcuts (default is enable)
 * Easy to set font like v0.2.x series.
 * Sorting like v0.2.x series.
+* Enable/disable scrollbar (default is enable)
 
 0.4.0 (2011/03/20)
 ------------------

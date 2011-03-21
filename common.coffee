@@ -34,6 +34,7 @@ jQuery ($) ->
         modifier: shortcuts.openBookmarkTreeInNewWindow?.modifier || 'alt'
         key: shortcuts.openBookmarkTreeInNewWindow?.key || 'w'
     rememberOpenedDirectory: localStorage.rememberOpenedDirectory == 'true'
+    hideScrollbar: localStorage.hideScrollbar == 'true'
     sortBy: localStorage.sortBy || 'index'
     rootDirectory: localStorage.rootDirectory || '0'
 

@@ -138,3 +138,10 @@ jQuery ($) ->
 
   $('body').css(fontFamily: options.font.fontFace, fontSize: options.font.fontSize)
   $('style').html(options.customStyle)
+
+  if options.hideScrollbar
+    $('#tree')
+      .css(overflow: 'hidden')
+      .bind 'mousewheel', (e) ->
+        self = $(this)
+        self.scrollTop(self.scrollTop() - e.wheelDelta)
