@@ -15,6 +15,7 @@ Future
 * Change a colorful icon
 * Enable/Disable shortcuts (default is enable)
 * Easy to set font like v0.2.x series.
+* Sorting like v0.2.x series.
 
 0.4.0 (2011/03/20)
 ------------------

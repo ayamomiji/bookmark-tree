@@ -129,3 +129,8 @@ jQuery ($) ->
   $('#open-bookmark-tree-in-new-window-key')
     .val(options.shortcuts.openBookmarkTreeInNewWindow.key)
     .change(updateShortcuts)
+
+  $('#sort-by')
+    .val(options.sortBy)
+    .change ->
+      delay => localStorage.sortBy = this.value

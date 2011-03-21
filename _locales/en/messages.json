@@ -117,6 +117,21 @@
   "rootDirectory": {
     "message": "Root directory"
   },
+  "sortBy": {
+    "message": "Sort by"
+  },
+  "index": {
+    "message": "Index"
+  },
+  "id": {
+    "message": "Id"
+  },
+  "dateAdded": {
+    "message": "Date added"
+  },
+  "title": {
+    "message": "Title"
+  },
   "contact": {
     "message": "Contact author"
   },

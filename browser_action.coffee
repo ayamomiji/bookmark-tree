@@ -25,7 +25,7 @@ jQuery ($) ->
       nodes.push(child) for child in node.children if node.children
 
     treeData[0].title = '(root)'
-    treeData[rootId].children.forEach (child) ->
+    sort(treeData[rootId].children).forEach (child) ->
       tree.find('ul:first').append buildNode(child)
 
     spentTime = new Date().getTime() - startTime
@@ -59,7 +59,7 @@ jQuery ($) ->
     elem.find('.title .favicon:first').attr('src', 'open.png')
     children = elem.find('.children:first')
     if children.find('li').size() == 0
-      node.children.forEach (child) ->
+      sort(node.children).forEach (child) ->
         children.append buildNode(child)
 
     if options.rememberOpenedDirectory
@@ -73,6 +73,14 @@ jQuery ($) ->
     if options.rememberOpenedDirectory
       openingDirectory[id] = null
       localStorage.openingDirectory = JSON.stringify(openingDirectory)
+
+  sort = (nodes) ->
+    switch options.sortBy
+      when 'index'     then nodes.sort (b1, b2) -> b1.index - b2.index
+      when 'id'        then nodes.sort (b1, b2) -> b1.id - b2.id
+      when 'dateAdded' then nodes.sort (b1, b2) -> b1.dateAdded - b2.dateAdded
+      when 'title'     then nodes.sort (b1, b2) -> b1.title.toLowerCase() > b2.title.toLowerCase() ? 1 : -1
+      else                  nodes
 
   $('.directory > .title').live 'mouseup', (e) ->
     self = $(this)

@@ -117,6 +117,21 @@
   "rootDirectory": {
     "message": "根目錄"
   },
+  "sortBy": {
+    "message": "排序方式"
+  },
+  "index": {
+    "message": "索引值"
+  },
+  "id": {
+    "message": "序號"
+  },
+  "dateAdded": {
+    "message": "加入日期"
+  },
+  "title": {
+    "message": "標題"
+  },
   "contact": {
     "message": "聯絡作者"
   },
