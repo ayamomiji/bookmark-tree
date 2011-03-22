@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title data-i18n-key='options_page'></title>
+    <link href='options_page.css' rel='stylesheet' type='text/css' />
+    <script src='jquery.js' type='text/javascript'></script>
+    <script src='jquery.tmpl.js' type='text/javascript'></script>
+    <script src='common.js' type='text/javascript'></script>
+    <script src='options_page.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <h1 data-i18n-key='options_page'></h1>
+    <section class='options'>
+      <section>
+        <h2 data-i18n-key='appearance'></h2>
+        <h3 data-i18n-key='size'></h3>
+        <label data-i18n-key='width' for='width'></label>
+        <input id='width' size='10' type='number' />
+        <label data-i18n-key='height' for='height'></label>
+        <input id='height' size='10' type='number' />
+        <h3 data-i18n-key='font'></h3>
+        <label data-i18n-key='fontFace' for='font-face'></label>
+        <input id='font-face' size='20' type='text' />
+        <br />
+        <label data-i18n-key='fontSize' for='font-size'></label>
+        <input id='font-size' size='10' type='text' />
+        <div data-i18n-key='fontSizeTips'></div>
+        <h3 data-i18n-key='customStyle'></h3>
+        <textarea cols='40' id='custom-style' rows='10'></textarea>
+      </section>
+      <section>
+        <h2 data-i18n-key='behavior'></h2>
+        <h3 data-i18n-key='bookmarkBehavior'></h3>
+        <div>
+          <label data-i18n-key='behaviorsBookmarkLeft' for='behaviors-bookmark-left'></label>
+          <select id='behaviors-bookmark-left'>
+            <option data-i18n-key='openInNewTab' value='openInNewTab'></option>
+            <option data-i18n-key='openInCurrentTab' value='openInCurrentTab'></option>
+            <option data-i18n-key='openInBackgroundTab' value='openInBackgroundTab'></option>
+            <option data-i18n-key='openInNewWindow' value='openInNewWindow'></option>
+          </select>
+        </div>
+        <div>
+          <label data-i18n-key='behaviorsBookmarkMiddle' for='behaviors-bookmark-middle'></label>
+          <select id='behaviors-bookmark-middle'>
+            <option data-i18n-key='openInNewTab' value='openInNewTab'></option>
+            <option data-i18n-key='openInCurrentTab' value='openInCurrentTab'></option>
+            <option data-i18n-key='openInBackgroundTab' value='openInBackgroundTab'></option>
+            <option data-i18n-key='openInNewWindow' value='openInNewWindow'></option>
+          </select>
+        </div>
+        <div>
+          <label data-i18n-key='behaviorsBookmarkRight' for='behaviors-bookmark-right'></label>
+          <select id='behaviors-bookmark-right'>
+            <option data-i18n-key='openInNewTab' value='openInNewTab'></option>
+            <option data-i18n-key='openInCurrentTab' value='openInCurrentTab'></option>
+            <option data-i18n-key='openInBackgroundTab' value='openInBackgroundTab'></option>
+            <option data-i18n-key='openInNewWindow' value='openInNewWindow'></option>
+          </select>
+        </div>
+        <h3 data-i18n-key='directoryBehavior'></h3>
+        <div>
+          <label data-i18n-key='behaviorsDirectoryLeft' for='behaviors-directory-left'></label>
+          <select id='behaviors-directory-left'>
+            <option data-i18n-key='toggle' value='toggle'></option>
+            <option data-i18n-key='openAllInCurrentWindow' value='openAllInCurrentWindow'></option>
+            <option data-i18n-key='openAllInNewWindow' value='openAllInNewWindow'></option>
+          </select>
+        </div>
+        <div>
+          <label data-i18n-key='behaviorsDirectoryMiddle' for='behaviors-directory-middle'></label>
+          <select id='behaviors-directory-middle'>
+            <option data-i18n-key='toggle' value='toggle'></option>
+            <option data-i18n-key='openAllInCurrentWindow' value='openAllInCurrentWindow'></option>
+            <option data-i18n-key='openAllInNewWindow' value='openAllInNewWindow'></option>
+          </select>
+        </div>
+        <div>
+          <label data-i18n-key='behaviorsDirectoryRight' for='behaviors-directory-right'></label>
+          <select id='behaviors-directory-right'>
+            <option data-i18n-key='toggle' value='toggle'></option>
+            <option data-i18n-key='openAllInCurrentWindow' value='openAllInCurrentWindow'></option>
+            <option data-i18n-key='openAllInNewWindow' value='openAllInNewWindow'></option>
+          </select>
+        </div>
+        <h3 data-i18n-key='shortcuts'></h3>
+        <div>
+          <input id='disable-shortcuts' type='checkbox' value='on' />
+          <label data-i18n-key='disableShortcuts' for='disable-shortcuts'></label>
+        </div>
+        <div>
+          <span data-i18n-key='openBookmarkTreeInNewTab'></span>
+          <select id='open-bookmark-tree-in-new-tab-modifier'>
+            <option data-i18n-key='ctrl' value='ctrl'></option>
+            <option data-i18n-key='alt' value='alt'></option>
+            <option data-i18n-key='meta' value='meta'></option>
+          </select>
+          +
+          <select id='open-bookmark-tree-in-new-tab-key'></select>
+        </div>
+        <div>
+          <span data-i18n-key='openBookmarkTreeInNewWindow'></span>
+          <select id='open-bookmark-tree-in-new-window-modifier'>
+            <option data-i18n-key='ctrl' value='ctrl'></option>
+            <option data-i18n-key='alt' value='alt'></option>
+            <option data-i18n-key='meta' value='meta'></option>
+          </select>
+          +
+          <select id='open-bookmark-tree-in-new-window-key'></select>
+        </div>
+        <p data-i18n-key='shortcutsNotice'></p>
+      </section>
+      <section>
+        <h2 data-i18n-key='misc'></h2>
+        <div>
+          <input id='remember-opened-directory' type='checkbox' value='on' />
+          <label data-i18n-key='rememberOpenedDirectory' for='remember-opened-directory'></label>
+        </div>
+        <div>
+          <input id='hide-scrollbar' type='checkbox' value='on' />
+          <label data-i18n-key='hideScrollbar' for='hide-scrollbar'></label>
+        </div>
+        <div>
+          <input id='close-popup-after-open-bookmark' type='checkbox' value='on' />
+          <label data-i18n-key='closePopupAfterOpenBookmark' for='close-popup-after-open-bookmark'></label>
+        </div>
+        <h3 data-i18n-key='rootDirectory'></h3>
+        <select id='root-directory'></select>
+        <h3 data-i18n-key='sortBy'></h3>
+        <select id='sort-by'>
+          <option data-i18n-key='index' value='index'></option>
+          <option data-i18n-key='id' value='id'></option>
+          <option data-i18n-key='dateAdded' value='dateAdded'></option>
+          <option data-i18n-key='title' value='title'></option>
+        </select>
+        <h3 data-i18n-key='contact'></h3>
+        <p data-i18n-key='aboutMe'></p>
+        <dl>
+          <dt>Twitter</dt>
+          <dd>
+            <a href='http://twitter.com/ayahatate' target='blank'>http://twitter.com/ayahatate</a>
+          </dd>
+          <dt>Plurk</dt>
+          <dd>
+            <a href='http://www.plurk.com/ayamomiji' target='blank'>http://www.plurk.com/ayamomiji</a>
+          </dd>
+          <dt>GitHub</dt>
+          <dd>
+            <a href='https://github.com/ayamomiji' target='blank'>https://github.com/ayamomiji</a>
+          </dd>
+          <dt>Blog (Chinese Only)</dt>
+          <dd>
+            <a href='http://aya.idv.tw' target='blank'>http://aya.idv.tw</a>
+          </dd>
+        </dl>
+      </section>
+    </section>
+    <script id='option-tmpl' type='text/x-jquery-tmpl'>
+      <option value='${value}'>${title}</option>
+    </script>
+  </body>
+</html>

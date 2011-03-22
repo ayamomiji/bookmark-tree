@@ -1,0 +1,16 @@
+/* line 1, options_page.scss */
+section.options {
+  display: table;
+  width: 100%;
+}
+/* line 5, options_page.scss */
+section.options section {
+  display: table-cell;
+  width: 33%;
+  padding: 5px;
+}
+
+/* line 12, options_page.scss */
+textarea {
+  width: 99%;
+}

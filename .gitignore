@@ -1,7 +1,2 @@
 *.swp
 .sass-cache
-*.js
-*.html
-*.css
-!jquery.js
-!jquery.tmpl.js
