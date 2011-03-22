@@ -1,14 +1,6 @@
 Changes
 =======
 
-Future
-------
-
-* Theme Gallery
-* Instant search bookmarks
-* Bookmarklet support
-* Keyboard support
-
 0.6.0 (Unreleased)
 ------------------
 
