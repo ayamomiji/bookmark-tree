@@ -5,3 +5,4 @@
 *.css
 !jquery.js
 !jquery.tmpl.js
+bookmark-tree
