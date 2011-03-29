@@ -120,6 +120,9 @@
   "closePopupAfterOpenBookmark": {
     "message": "Close popup after open bookmark"
   },
+  "moveDirectoriesToListTop": {
+    "message": "Move directories to list top"
+  },
   "rootDirectory": {
     "message": "Root directory"
   },

@@ -4,6 +4,8 @@ Changes
 0.6.0 (Unreleased)
 ------------------
 
+* Enable/disable move directories to list top (default is disable)
+
 0.5.0 (2011/03/22)
 ------------------
 

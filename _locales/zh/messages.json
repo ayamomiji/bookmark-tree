@@ -120,6 +120,9 @@
   "closePopupAfterOpenBookmark": {
     "message": "開啟視窗後關閉彈出視窗"
   },
+  "moveDirectoriesToListTop": {
+    "message": "移動所有目錄到清單最頂端"
+  },
   "rootDirectory": {
     "message": "根目錄"
   },

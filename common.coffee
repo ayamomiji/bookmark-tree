@@ -36,6 +36,7 @@ jQuery ($) ->
     rememberOpenedDirectory: localStorage.rememberOpenedDirectory == 'true'
     hideScrollbar: localStorage.hideScrollbar == 'true'
     closePopupAfterOpenBookmark: localStorage.closePopupAfterOpenBookmark == 'true'
+    moveDirectoriesToListTop: localStorage.moveDirectoriesToListTop == 'true'
     sortBy: localStorage.sortBy || 'index'
     rootDirectory: localStorage.rootDirectory || '0'
 

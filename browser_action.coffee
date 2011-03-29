@@ -79,12 +79,23 @@ jQuery ($) ->
       localStorage.openingDirectory = JSON.stringify(openingDirectory)
 
   sort = (nodes) ->
-    switch options.sortBy
+    sorted = switch options.sortBy
       when 'index'     then nodes.sort (b1, b2) -> b1.index - b2.index
       when 'id'        then nodes.sort (b1, b2) -> b1.id - b2.id
       when 'dateAdded' then nodes.sort (b1, b2) -> b1.dateAdded - b2.dateAdded
       when 'title'     then nodes.sort (b1, b2) -> b1.title.toLowerCase() > b2.title.toLowerCase() ? 1 : -1
       else                  nodes
+    if options.moveDirectoriesToListTop
+      directories = []
+      bookmarks = []
+      sorted.forEach (node) ->
+        if node.children?
+          directories.push(node)
+        else
+          bookmarks.push(node)
+      directories.concat(bookmarks)
+    else
+      sorted
 
   $('.directory > .title').live 'mouseup', (e) ->
     self = $(this)

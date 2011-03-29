@@ -140,6 +140,11 @@ jQuery ($) ->
     .change ->
       delay => localStorage.closePopupAfterOpenBookmark = this.checked
 
+  $('#move-directories-to-list-top')
+    .attr('checked', options.moveDirectoriesToListTop)
+    .change ->
+      delay => localStorage.moveDirectoriesToListTop = this.checked
+
   $('#sort-by')
     .val(options.sortBy)
     .change ->
