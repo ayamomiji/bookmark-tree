@@ -145,7 +145,7 @@ jQuery ($) ->
     openInCurrentTab: (node) ->
       chrome.tabs.getSelected null, (tab) ->
         chrome.tabs.update(tab.id, url: node.url)
-      window.close() if options.closePopupAfterOpenBookmark
+        window.close() if options.closePopupAfterOpenBookmark
     openInBackgroundTab: (node) ->
       chrome.tabs.create(url: node.url, selected: false)
       window.close() if options.closePopupAfterOpenBookmark
