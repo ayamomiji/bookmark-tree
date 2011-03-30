@@ -5,6 +5,7 @@ Changes
 ------------------
 
 * Enable/disable move directories to list top (default is disable)
+* Bug fix: selecting close popup after open bookmark and open in current tab will not let bookmarks open at all
 
 0.5.0 (2011/03/22)
 ------------------
