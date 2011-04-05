@@ -1,9 +1,13 @@
 task :default => [:clean, :build]
 
 # To run the build task, you should install these packages:
-# gem: compass
+# gem: haml, compass
 # npm: coffee-script
 task :build do
+  Dir.glob('*.haml') do |f|
+    output = f.gsub(/\.haml/, '.html')
+    sh "haml #{f} #{output}"
+  end
   sh 'compass compile'
   Dir.glob('*.coffee') do |f|
     sh "coffee -c #{f}"
