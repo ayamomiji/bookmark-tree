@@ -1,0 +1,150 @@
+{
+  "bookmarkTree": {
+    "message": "ayaya's Bookmark Tree"
+  },
+  "description": {
+    "message": "Provides a button to show bookmark tree and open bookmark in new tab."
+  },
+  "optionsPage": {
+    "message": "Options page for Bookmark Tree"
+  },
+  "appearance": {
+    "message": "Appearance"
+  },
+  "behavior": {
+    "message": "Behavior"
+  },
+  "misc": {
+    "message": "Miscellaneous"
+  },
+  "size": {
+    "message": "Size"
+  },
+  "width": {
+    "message": "Width"
+  },
+  "height": {
+    "message": "Height"
+  },
+  "font": {
+    "message": "Font"
+  },
+  "fontFace": {
+    "message": "Font face"
+  },
+  "fontSize": {
+    "message": "Font size"
+  },
+  "fontSizeTips": {
+    "message": "Tips: you can use px, em, pt, or % as unit."
+  },
+  "customStyle": {
+    "message": "Custom style"
+  },
+  "bookmarkBehavior": {
+    "message": "Bookmark behavior"
+  },
+  "behaviorsBookmarkLeft": {
+    "message": "When left-click..."
+  },
+  "behaviorsBookmarkMiddle": {
+    "message": "When middle-click..."
+  },
+  "behaviorsBookmarkRight": {
+    "message": "When right-click..."
+  },
+  "openInNewTab": {
+    "message": "Open in new tab"
+  },
+  "openInCurrentTab": {
+    "message": "Open in current tab"
+  },
+  "openInBackgroundTab": {
+    "message": "Open in background tab"
+  },
+  "openInNewWindow": {
+    "message": "Open in new window"
+  },
+  "directoryBehavior": {
+    "message": "Directory behavior"
+  },
+  "behaviorsDirectoryLeft": {
+    "message": "When left-click..."
+  },
+  "behaviorsDirectoryMiddle": {
+    "message": "When middle-click..."
+  },
+  "behaviorsDirectoryRight": {
+    "message": "When right-click..."
+  },
+  "toggle": {
+    "message": "Toggle"
+  },
+  "openAllInCurrentWindow": {
+    "message": "Open all children in current window"
+  },
+  "openAllInNewWindow": {
+    "message": "Open all children in new window"
+  },
+  "shortcuts": {
+    "message": "Shortcuts"
+  },
+  "disableShortcuts": {
+    "message": "Disable shortcuts"
+  },
+  "openBookmarkTreeInNewTab": {
+    "message": "Open BookmarkTree in new tab"
+  },
+  "openBookmarkTreeInNewWindow": {
+    "message": "Open BookmarkTree in new window"
+  },
+  "ctrl": {
+    "message": "Ctrl"
+  },
+  "alt": {
+    "message": "Alt"
+  },
+  "meta": {
+    "message": "Meta"
+  },
+  "shortcutsNotice": {
+    "message": "Shortcuts are only worked in fully loaded pages for now.
+                (Google Chrome does not support this feature native yet)"
+  },
+  "rememberOpenedDirectory": {
+    "message": "Remember opened directory"
+  },
+  "hideScrollbar": {
+    "message": "Hide scrollbar"
+  },
+  "closePopupAfterOpenBookmark": {
+    "message": "Close popup after open bookmark"
+  },
+  "moveDirectoriesToListTop": {
+    "message": "Move directories to list top"
+  },
+  "rootDirectory": {
+    "message": "Root directory"
+  },
+  "sortBy": {
+    "message": "Sort by"
+  },
+  "index": {
+    "message": "Index"
+  },
+  "id": {
+    "message": "Id"
+  },
+  "dateAdded": {
+    "message": "Date added"
+  },
+  "title": {
+    "message": "Title"
+  },
+  "contact": {
+    "message": "Contact author"
+  },
+  "aboutMe": {
+    "message": "I'm ayaya zhao, live in Taiwan. I mainly use Chinese, but you can also use English or Japanese to contact me. :)"
+  }
+}
