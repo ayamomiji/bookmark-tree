@@ -5,11 +5,12 @@ var webpack = require("webpack"),
     CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin,
     CopyWebpackPlugin = require("copy-webpack-plugin"),
     HtmlWebpackPlugin = require("html-webpack-plugin"),
-    WriteFilePlugin = require("write-file-webpack-plugin"),
-    CopyPlugin = require('copy-webpack-plugin');
+    WriteFilePlugin = require("write-file-webpack-plugin");
 
 // load the secrets
-var alias = {};
+var alias = {
+  svelte: path.resolve('node_modules', 'svelte')
+};
 
 var secretsPath = path.join(__dirname, ("secrets." + env.NODE_ENV + ".js"));
 
@@ -33,6 +34,11 @@ var options = {
   module: {
     rules: [
       {
+        test: /\.svelte$/,
+        exclude: /node_modules/,
+        use: 'svelte-loader'
+      },
+      {
         test: /\.css$/,
         loader: "style-loader!css-loader",
         exclude: /node_modules/
@@ -50,7 +56,9 @@ var options = {
     ]
   },
   resolve: {
-    alias: alias
+    alias: alias,
+    extensions: ['.mjs', '.js', '.svelte'],
+    mainFields: ['svelte', 'browser', 'module', 'main']
   },
   plugins: [
     // clean the build folder
@@ -67,6 +75,8 @@ var options = {
           ...JSON.parse(content.toString())
         }))
       }
+    }, {
+      from: 'src/_locales', to: '_locales'
     }]),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "popup.html"),
@@ -83,8 +93,7 @@ var options = {
       filename: "background.html",
       chunks: ["background"]
     }),
-    new WriteFilePlugin(),
-    new CopyPlugin([{ from: 'src/_locales', to: '_locales' }])
+    new WriteFilePlugin()
   ]
 };
 
