@@ -1,6 +1,6 @@
 <script>
-  import { width, height } from '../store'
   import Root from './Root.svelte'
+  import CustomStyle from './CustomStyle.svelte'
 
   let rootNode
 
@@ -25,7 +25,7 @@
 
 <svelte:body on:contextmenu={e => e.preventDefault()} />
 
-<div id='tree' style={`width: ${$width}px; height: ${$height}px;`}>
+<div id='tree'>
   {#if rootNode}
     <Root node={rootNode} />
   {:else}
@@ -35,3 +35,4 @@
 <div id='url'>
   TODO
 </div>
+<CustomStyle />
