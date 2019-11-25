@@ -3,6 +3,7 @@
   import Appearance from './Appearance.svelte'
   import Behaviors from './Behaviors.svelte'
   import Shortcuts from './Shortcuts.svelte'
+  import Contact from './Contact.svelte'
 </script>
 
 <div class='container'>
@@ -19,6 +20,7 @@
 
     <section class='col-4'>
       <Shortcuts />
+      <Contact />
     </section>
   </div>
 </div>
