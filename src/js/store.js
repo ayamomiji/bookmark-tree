@@ -1,10 +1,8 @@
 import { writable, derived, get } from 'svelte/store'
 
 const width = writable(parseInt(localStorage.width) || 300)
-width.subscribe(value => { localStorage.width = value })
 
 const height = writable(parseInt(localStorage.height) || 400)
-height.subscribe(value => { localStorage.height = value })
 
 const openingDirectories = writable(
   JSON.parse(localStorage.openingDirectories ||
@@ -23,4 +21,8 @@ const toggleDirectory = id => {
   openingDirectories.set({ ...current, [id]: !current[id] })
 }
 
-export { width, height, openingDirectory, toggleDirectory }
+const behaviors = writable(
+  JSON.parse(localStorage.behaviors || '{}')
+)
+
+export { width, height, openingDirectory, toggleDirectory, behaviors }

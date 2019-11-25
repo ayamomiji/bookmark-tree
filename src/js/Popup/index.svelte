@@ -23,6 +23,8 @@
   }
 </style>
 
+<svelte:body on:contextmenu={e => e.preventDefault()} />
+
 <div id='tree' style={`width: ${$width}px; height: ${$height}px;`}>
   {#if rootNode}
     <Root node={rootNode} />

@@ -13,11 +13,14 @@
     ($opening ? 'open.png' : 'close.png') :
     `chrome://favicon/${node.url}`
 
-  function handleClick () {
+  const buttons = ['left', 'middle', 'right']
+
+  function handleClick (event) {
+    const button = buttons[event.button]
     if (node.children) { // is a directory
-      executeDirectoryBehavior(node, 'toggle')
+      executeDirectoryBehavior(node, button)
     } else { // is a bookmark
-      executeBookmarkBehavior(node, 'openInNewTab')
+      executeBookmarkBehavior(node, button)
     }
   }
 </script>
@@ -37,7 +40,7 @@
   }
 </style>
 
-<div class='node' style={`padding-left: ${level}em;`} on:click={handleClick}>
+<div class='node' style={`padding-left: ${level}em;`} on:mouseup={handleClick}>
   <div class='icon'><img class='icon' src={iconUrl} alt={node.title} /></div>
   <div class='node-title'>{node.title}</div>
 </div>
