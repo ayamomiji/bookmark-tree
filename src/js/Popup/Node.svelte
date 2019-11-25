@@ -31,6 +31,12 @@
     display: flex;
   }
 
+  .node-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .icon {
     margin-right: 0.25em;
   }
@@ -42,7 +48,7 @@
 
 <div class='node' style={`padding-left: ${level}em;`} on:mouseup={handleClick}>
   <div class='icon'><img class='icon' src={iconUrl} alt={node.title} /></div>
-  <div class='node-title'>{node.title}</div>
+  <div class='node-title' title={node.title}>{node.title}</div>
 </div>
 {#if node.children && $opening}
   {#each node.children as child (child.id)}
