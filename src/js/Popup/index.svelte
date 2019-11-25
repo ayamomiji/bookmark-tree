@@ -1,5 +1,6 @@
 <script>
   import Root from './Root.svelte'
+  import URL from './URL.svelte'
   import CustomStyle from './CustomStyle.svelte'
 
   let rootNode
@@ -13,14 +14,6 @@
   #tree {
     overflow-y: scroll;
   }
-
-  #url {
-    border-top: 1px solid black;
-    line-height: 1em;
-    font-size: 1em;
-    height: 1em;
-    overflow: hidden;
-  }
 </style>
 
 <svelte:body on:contextmenu={e => e.preventDefault()} />
@@ -32,7 +25,5 @@
     Loading...
   {/if}
 </div>
-<div id='url'>
-  TODO
-</div>
+<URL />
 <CustomStyle />

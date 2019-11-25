@@ -27,5 +27,9 @@ body &#123;
   height: {$height}px;
 }
 
+#url &#123;
+  width: {$width}px;
+}
+
 {$customStyle}
 </div>

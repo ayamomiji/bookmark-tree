@@ -1,5 +1,5 @@
 <script>
-  import { openingDirectory } from '../store'
+  import { openingDirectory, hoveringNode } from '../store'
   import {
     executeDirectoryBehavior, executeBookmarkBehavior
   } from './behaviors'
@@ -22,6 +22,14 @@
     } else { // is a bookmark
       executeBookmarkBehavior(node, button)
     }
+  }
+
+  function setHovering () {
+    $hoveringNode = node
+  }
+
+  function unsetHovering () {
+    $hoveringNode = null
   }
 </script>
 
@@ -46,7 +54,8 @@
   }
 </style>
 
-<div class='node' style={`padding-left: ${level}em;`} on:mouseup={handleClick}>
+<div class='node' style={`padding-left: ${level}em;`} on:mouseup={handleClick}
+    on:mouseenter={setHovering} on:mouseleave={unsetHovering}>
   <div class='icon'><img class='icon' src={iconUrl} alt={node.title} /></div>
   <div class='node-title' title={node.title}>{node.title}</div>
 </div>

@@ -1,5 +1,6 @@
 import { writable, derived, get } from 'svelte/store'
 
+// appearance
 const width = writable(parseInt(localStorage.width) || 300)
 
 const height = writable(parseInt(localStorage.height) || 400)
@@ -10,6 +11,7 @@ const fontSize = writable(localStorage.fontSize || '80%')
 
 const customStyle = writable(localStorage.customStyle || '')
 
+// node state
 const openingDirectories = writable(
   JSON.parse(localStorage.openingDirectories ||
              localStorage.openingDirectory || // for backward compatibility ><
@@ -27,11 +29,14 @@ const toggleDirectory = id => {
   openingDirectories.set({ ...current, [id]: !current[id] })
 }
 
+const hoveringNode = writable()
+
+// behaviors
 const behaviors = writable(
   JSON.parse(localStorage.behaviors || '{}')
 )
 
 export {
   width, height, fontFace, fontSize, customStyle,
-  openingDirectory, toggleDirectory, behaviors
+  openingDirectory, toggleDirectory, behaviors, hoveringNode
 }
