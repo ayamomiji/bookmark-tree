@@ -62,9 +62,37 @@ const directoryMiddleBehavior =
 const directoryRightBehavior =
   writable(localStorage.directoryRightBehavior || 'openAllInNewWindow')
 
+// shortcuts
+if (localStorage.shortcuts) { // for backward compatibility ><
+  const legacyShortcuts = JSON.parse(localStorage.shortcuts)
+  if (!legacyShortcuts.openBookmarkTreeInNewTab) {
+    legacyShortcuts.openBookmarkTreeInNewTab = {}
+  }
+  if (!legacyShortcuts.openBookmarkTreeInNewWindow) {
+    legacyShortcuts.openBookmarkTreeInNewWindow = {}
+  }
+  localStorage.disableShortcuts = legacyShortcuts.disable
+  localStorage.openBookmarkTreeInNewTab =
+    JSON.stringify(legacyShortcuts.openBookmarkTreeInNewTab)
+  localStorage.openBookmarkTreeInNewWindow =
+    JSON.stringify(legacyShortcuts.openBookmarkTreeInNewWindow)
+  localStorage.removeItem('shortcuts')
+}
+
+const disableShortcuts = writable(localStorage.disableShortcuts == 'true')
+const openBookmarkTreeInNewTab = writable(
+  JSON.parse(localStorage.openBookmarkTreeInNewTab ||
+             '{"modifier":"alt","key":"b"}')
+)
+const openBookmarkTreeInNewWindow = writable(
+  JSON.parse(localStorage.openBookmarkTreeInNewWindow ||
+             '{"modifier":"alt","key":"w"}')
+)
+
 export {
   width, height, fontFace, fontSize, customStyle,
   openingDirectory, toggleDirectory, hoveringNode,
   bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior,
-  directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior
+  directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior,
+  disableShortcuts, openBookmarkTreeInNewTab, openBookmarkTreeInNewWindow
 }

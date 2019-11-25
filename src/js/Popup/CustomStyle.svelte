@@ -22,6 +22,21 @@ body &#123;
   font-size: {$fontSize};
 }
 
+{#if location.search === '?full'}
+#tree &#123;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 1em;
+  right: 0;
+}
+
+#url &#123;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+{:else}
 #tree &#123;
   width: {$width}px;
   height: {$height}px;
@@ -30,6 +45,7 @@ body &#123;
 #url &#123;
   width: {$width}px;
 }
+{/if}
 
 {$customStyle}
 </div>

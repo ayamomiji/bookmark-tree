@@ -2,6 +2,7 @@
   import T from './Translation.svelte'
   import Appearance from './Appearance.svelte'
   import Behaviors from './Behaviors.svelte'
+  import Shortcuts from './Shortcuts.svelte'
 </script>
 
 <div class='container'>
@@ -17,9 +18,7 @@
     </section>
 
     <section class='col-4'>
-      <h2><T key='shortcuts' /></h2>
-
-      TODO...
+      <Shortcuts />
     </section>
   </div>
 </div>
