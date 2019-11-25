@@ -32,11 +32,39 @@ const toggleDirectory = id => {
 const hoveringNode = writable()
 
 // behaviors
-const behaviors = writable(
-  JSON.parse(localStorage.behaviors || '{}')
-)
+if (localStorage.behaviors) { // for backward compatibility ><
+  const legacyBehaviors = JSON.parse(localStorage.behaviors)
+  if (!legacyBehaviors.bookmark) {
+    legacyBehaviors.bookmark = {}
+  }
+  if (!legacyBehaviors.directory) {
+    legacyBehaviors.directory = {}
+  }
+  localStorage.bookmarkLeftBehavior = legacyBehaviors.bookmark.left
+  localStorage.bookmarkMiddleBehavior = legacyBehaviors.bookmark.middle
+  localStorage.bookmarkRightBehavior = legacyBehaviors.bookmark.right
+  localStorage.directoryLeftBehavior = legacyBehaviors.directory.left
+  localStorage.directoryMiddleBehavior = legacyBehaviors.directory.middle
+  localStorage.directoryRightBehavior = legacyBehaviors.directory.right
+  localStorage.removeItem('behaviors')
+}
+
+const bookmarkLeftBehavior =
+  writable(localStorage.bookmarkLeftBehavior || 'openInNewTab')
+const bookmarkMiddleBehavior =
+  writable(localStorage.bookmarkMiddleBehavior || 'openInCurrentTab')
+const bookmarkRightBehavior =
+  writable(localStorage.bookmarkRightBehavior || 'openInBackgroundTab')
+const directoryLeftBehavior =
+  writable(localStorage.directoryLeftBehavior || 'toggle')
+const directoryMiddleBehavior =
+  writable(localStorage.directoryMiddleBehavior || 'openAllInCurrentWindow')
+const directoryRightBehavior =
+  writable(localStorage.directoryRightBehavior || 'openAllInNewWindow')
 
 export {
   width, height, fontFace, fontSize, customStyle,
-  openingDirectory, toggleDirectory, behaviors, hoveringNode
+  openingDirectory, toggleDirectory, hoveringNode,
+  bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior,
+  directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior
 }

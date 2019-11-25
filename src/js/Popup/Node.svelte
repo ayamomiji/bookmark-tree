@@ -1,8 +1,6 @@
 <script>
   import { openingDirectory, hoveringNode } from '../store'
-  import {
-    executeDirectoryBehavior, executeBookmarkBehavior
-  } from './behaviors'
+  import { executeBehavior } from './behaviors'
   import Node from './Node.svelte'
 
   export let node
@@ -13,15 +11,8 @@
     ($opening ? 'open.png' : 'close.png') :
     `chrome://favicon/${node.url}`
 
-  const buttons = ['left', 'middle', 'right']
-
   function handleClick (event) {
-    const button = buttons[event.button]
-    if (node.children) { // is a directory
-      executeDirectoryBehavior(node, button)
-    } else { // is a bookmark
-      executeBookmarkBehavior(node, button)
-    }
+    executeBehavior(node, event)
   }
 
   function setHovering () {

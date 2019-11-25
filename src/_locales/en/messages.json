@@ -11,8 +11,8 @@
   "appearance": {
     "message": "Appearance"
   },
-  "behavior": {
-    "message": "Behavior"
+  "behaviors": {
+    "message": "Behaviors"
   },
   "misc": {
     "message": "Miscellaneous"
@@ -41,17 +41,17 @@
   "customStyle": {
     "message": "Custom style"
   },
-  "bookmarkBehavior": {
-    "message": "Bookmark behavior"
+  "bookmarkBehaviors": {
+    "message": "Bookmark behaviors"
   },
-  "behaviorsBookmarkLeft": {
-    "message": "When left-click..."
+  "bookmarkLeftBehavior": {
+    "message": "On left clicked..."
   },
-  "behaviorsBookmarkMiddle": {
-    "message": "When middle-click..."
+  "bookmarkMiddleBehavior": {
+    "message": "On middle clicked..."
   },
-  "behaviorsBookmarkRight": {
-    "message": "When right-click..."
+  "bookmarkRightBehavior": {
+    "message": "On right clicked..."
   },
   "openInNewTab": {
     "message": "Open in new tab"
@@ -65,17 +65,17 @@
   "openInNewWindow": {
     "message": "Open in new window"
   },
-  "directoryBehavior": {
-    "message": "Directory behavior"
+  "directoryBehaviors": {
+    "message": "Directory behaviors"
   },
-  "behaviorsDirectoryLeft": {
-    "message": "When left-click..."
+  "directoryLeftBehavior": {
+    "message": "On left clicked..."
   },
-  "behaviorsDirectoryMiddle": {
-    "message": "When middle-click..."
+  "directoryMiddleBehavior": {
+    "message": "On middle clicked..."
   },
-  "behaviorsDirectoryRight": {
-    "message": "When right-click..."
+  "directoryRightBehavior": {
+    "message": "On right clicked..."
   },
   "toggle": {
     "message": "Toggle"

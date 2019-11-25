@@ -1,6 +1,7 @@
 <script>
   import T from './Translation.svelte'
   import Appearance from './Appearance.svelte'
+  import Behaviors from './Behaviors.svelte'
 </script>
 
 <div class='container'>
@@ -12,7 +13,7 @@
     </section>
 
     <section class='col-4'>
-      <h2><T key='behavior' /></h2>
+      <Behaviors />
     </section>
 
     <section class='col-4'>

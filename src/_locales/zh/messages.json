@@ -11,7 +11,7 @@
   "appearance": {
     "message": "外觀"
   },
-  "behavior": {
+  "behaviors": {
     "message": "行為"
   },
   "misc": {
@@ -41,16 +41,16 @@
   "customStyle": {
     "message": "自訂樣式"
   },
-  "bookmarkBehavior": {
+  "bookmarkBehaviors": {
     "message": "書籤行為"
   },
-  "behaviorsBookmarkLeft": {
+  "bookmarkLeftBehavior": {
     "message": "當按下左鍵時..."
   },
-  "behaviorsBookmarkMiddle": {
+  "bookmarkMiddleBehavior": {
     "message": "當按下中鍵時..."
   },
-  "behaviorsBookmarkRight": {
+  "bookmarkRightBehavior": {
     "message": "當按下右鍵時..."
   },
   "openInNewTab": {
@@ -65,16 +65,16 @@
   "openInNewWindow": {
     "message": "開啟於新視窗"
   },
-  "directoryBehavior": {
+  "directoryBehaviors": {
     "message": "目錄行為"
   },
-  "behaviorsDirectoryLeft": {
+  "directoryLeftBehavior": {
     "message": "當按下左鍵時..."
   },
-  "behaviorsDirectoryMiddle": {
+  "directoryMiddleBehavior": {
     "message": "當按下中鍵時..."
   },
-  "behaviorsDirectoryRight": {
+  "directoryRightBehavior": {
     "message": "當按下右鍵時..."
   },
   "toggle": {

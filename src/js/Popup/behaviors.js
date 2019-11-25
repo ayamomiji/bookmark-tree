@@ -1,22 +1,19 @@
-import { toggleDirectory, behaviors } from '../store'
+import { get } from 'svelte/store'
+import {
+  toggleDirectory,
+  directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior,
+  bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior
+} from '../store'
 
-function executeDirectoryBehavior (node, button) {
-  const behavior = getDirectoryBehavior(button)
-  switch (behavior) {
-    case 'toggle':
-      toggleDirectory(node.id)
-      break
-    case 'openAllInCurrentWindow':
-      node.children.forEach(child => {
-        chrome.tabs.create({ url: child.url })
-      })
-      break
-    case 'openAllInNewWindow':
-      chrome.extension.sendRequest({
-        type: 'openAllInNewWindow',
-        directory: node
-      })
-      break
+const buttons = ['left', 'middle', 'right']
+
+function executeBehavior (node, event) {
+  const isDirectory = !!node.children
+  const button = buttons[event.button]
+  if (isDirectory) {
+    executeDirectoryBehavior(node, button)
+  } else {
+    executeBookmarkBehavior(node, button)
   }
 }
 
@@ -40,27 +37,40 @@ function executeBookmarkBehavior (node, button) {
   }
 }
 
-const defaultDirectoryBehaviors = {
-  left: 'toggle',
-  middle: 'openAllInCurrentWindow',
-  right: 'openAllInNewWindow'
-}
-
-const defaultBookmarkBehaviors = {
-  left: 'openInNewTab',
-  middle: 'openInCurrentTab',
-  right: 'openInBackgroundTab'
-}
-
-function getDirectoryBehavior (button) {
-  return (behaviors.directory || defaultDirectoryBehaviors)[button]
+function executeDirectoryBehavior (node, button) {
+  const behavior = getDirectoryBehavior(button)
+  switch (behavior) {
+    case 'toggle':
+      toggleDirectory(node.id)
+      break
+    case 'openAllInCurrentWindow':
+      node.children.forEach(child => {
+        chrome.tabs.create({ url: child.url })
+      })
+      break
+    case 'openAllInNewWindow':
+      chrome.extension.sendRequest({
+        type: 'openAllInNewWindow',
+        directory: node
+      })
+      break
+  }
 }
 
 function getBookmarkBehavior (button) {
-  return (behaviors.bookmark || defaultBookmarkBehaviors)[button]
+  switch (button) {
+    case 'left': return get(bookmarkLeftBehavior)
+    case 'middle': return get(bookmarkMiddleBehavior)
+    case 'right': return get(bookmarkRightBehavior)
+  }
 }
 
-export {
-  executeDirectoryBehavior, executeBookmarkBehavior,
-  getDirectoryBehavior, getBookmarkBehavior
+function getDirectoryBehavior (button) {
+  switch (button) {
+    case 'left': return get(directoryLeftBehavior)
+    case 'middle': return get(directoryMiddleBehavior)
+    case 'right': return get(directoryRightBehavior)
+  }
 }
+
+export { executeBehavior }
