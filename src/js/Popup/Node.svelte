@@ -6,6 +6,9 @@
   export let level
 
   let opening = openingDirectory(node.id)
+  $: iconUrl = node.children ?
+    ($opening ? 'open.png' : 'close.png') :
+    `chrome://favicon/${node.url}`
 
   function handleClick () {
     if (node.children) { // is a directory
@@ -17,6 +20,11 @@
 <style>
   .node {
     cursor: pointer;
+    display: flex;
+  }
+
+  .icon {
+    margin-right: 0.25em;
   }
 
   .node:hover {
@@ -25,7 +33,8 @@
 </style>
 
 <div class='node' style={`padding-left: ${level}em;`} on:click={handleClick}>
-  {node.title}
+  <div class='icon'><img class='icon' src={iconUrl} alt={node.title} /></div>
+  <div class='node-title'>{node.title}</div>
 </div>
 {#if node.children && $opening}
   {#each node.children as child (child.id)}
