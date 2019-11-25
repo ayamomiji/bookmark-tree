@@ -1,5 +1,6 @@
 <script>
   import { openingDirectory, toggleDirectory } from '../store'
+  import { executeBookmarkBehavior } from './behaviors'
   import Node from './Node.svelte'
 
   export let node
@@ -13,6 +14,8 @@
   function handleClick () {
     if (node.children) { // is a directory
       toggleDirectory(node.id)
+    } else { // is a bookmark
+      executeBookmarkBehavior(node, 'openInNewTab')
     }
   }
 </script>
