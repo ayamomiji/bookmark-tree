@@ -57,3 +57,13 @@
 
 <textarea class='form-control' id='fontFace' type='string' rows={10}
     bind:value={$customStyle} />
+
+<div class='text-muted'>
+  Available selectors are:
+  <code>body</code>,
+  <code>#tree</code>,
+  <code>#url</code>,
+  <code>.node</code>,
+  <code>.node-title</code> and
+  <code>.icon</code>
+</div>
