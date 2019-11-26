@@ -1,7 +1,6 @@
-import { get } from 'svelte/store'
 import {
-  width, height,
-  disableShortcuts, openBookmarkTreeInNewTab, openBookmarkTreeInNewWindow
+  readWidth, readHeight,
+  readDisableShortcuts, readOpenBookmarkTreeInNewTab, readOpenBookmarkTreeInNewWindow
 } from './store'
 import '../img/icon.png'
 
@@ -33,23 +32,23 @@ function openAllInNewWindow (children) {
 
 function handleShortcut ({ key, modifier }) {
   key = String.fromCharCode(key).toLowerCase()
-  if (get(disableShortcuts)) {
+  if (readDisableShortcuts()) {
     return
   }
 
-  const newTab = get(openBookmarkTreeInNewTab)
+  const newTab = readOpenBookmarkTreeInNewTab()
   if (newTab.key === key &&
       newTab.modifier === modifier) {
-    window.open(chrome.extension.getURL('popup.html?full'),
-                '',
-                `width=${get(width)},height=${get(height)}`)
-  }
-
-  const newWindow = get(openBookmarkTreeInNewWindow)
-  if (newWindow.key === key &&
-      newWindow.modifier === modifier) {
     chrome.tabs.create({
       url: chrome.extension.getURL('popup.html?full')
     })
+  }
+
+  const newWindow = readOpenBookmarkTreeInNewWindow()
+  if (newWindow.key === key &&
+      newWindow.modifier === modifier) {
+    window.open(chrome.extension.getURL('popup.html?full'),
+                '',
+                `width=${readWidth()},height=${readHeight()}`)
   }
 }

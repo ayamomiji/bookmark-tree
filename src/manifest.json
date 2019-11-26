@@ -14,8 +14,8 @@
     "128": "icon.png"
   },
   "manifest_version": 2,
-    "permissions": [
-    "http://*/*",
+  "permissions": [
+    "activeTab",
     "chrome://favicon/",
     "bookmarks",
     "tabs"

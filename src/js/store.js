@@ -1,9 +1,17 @@
 import { writable, derived, get } from 'svelte/store'
 
 // appearance
-const width = writable(parseInt(localStorage.width) || 300)
+function readWidth () {
+  return parseInt(localStorage.width) || 300
+}
 
-const height = writable(parseInt(localStorage.height) || 400)
+function readHeight () {
+  return parseInt(localStorage.height) || 400
+}
+
+const width = writable(readWidth())
+
+const height = writable(readHeight())
 
 const fontFace = writable(localStorage.fontFace || 'inherit')
 
@@ -59,15 +67,25 @@ if (localStorage.shortcuts) { // for backward compatibility ><
   localStorage.removeItem('shortcuts')
 }
 
-const disableShortcuts = writable(localStorage.disableShortcuts == 'true')
-const openBookmarkTreeInNewTab = writable(
-  JSON.parse(localStorage.openBookmarkTreeInNewTab ||
-             '{"modifier":"alt","key":"b"}')
-)
-const openBookmarkTreeInNewWindow = writable(
-  JSON.parse(localStorage.openBookmarkTreeInNewWindow ||
-             '{"modifier":"alt","key":"w"}')
-)
+function readDisableShortcuts () {
+  return localStorage.disableShortcuts == 'true'
+}
+
+function readOpenBookmarkTreeInNewTab () {
+  return JSON.parse(localStorage.openBookmarkTreeInNewTab ||
+                    '{"modifier":"alt","key":"b"}')
+}
+
+function readOpenBookmarkTreeInNewWindow () {
+  return JSON.parse(localStorage.openBookmarkTreeInNewWindow ||
+                    '{"modifier":"alt","key":"w"}')
+}
+
+const disableShortcuts = writable(readDisableShortcuts())
+
+const openBookmarkTreeInNewTab = writable(readOpenBookmarkTreeInNewTab())
+
+const openBookmarkTreeInNewWindow = writable(readOpenBookmarkTreeInNewWindow())
 
 // misc
 if (localStorage.rememberOpenedDirectory) { // for backward compatibility ><
@@ -109,9 +127,12 @@ openingDirectories.subscribe(value => {
 const hoveringNode = writable()
 
 export {
+  readWidth, readHeight,
   width, height, fontFace, fontSize, customStyle,
   bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior,
   directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior,
+  readDisableShortcuts, readOpenBookmarkTreeInNewTab,
+  readOpenBookmarkTreeInNewWindow,
   disableShortcuts, openBookmarkTreeInNewTab, openBookmarkTreeInNewWindow,
   rememberOpenedDirectories, moveDirectoriesToListTop, rootDirectory, sortBy,
   openingDirectory, toggleDirectory, hoveringNode,
