@@ -1,5 +1,5 @@
 <script>
-  import Root from './Root.svelte'
+  import Children from './Children.svelte'
   import URL from './URL.svelte'
   import CustomStyle from './CustomStyle.svelte'
 
@@ -20,7 +20,7 @@
 
 <div id='tree'>
   {#if rootNode}
-    <Root node={rootNode} />
+    <Children nodes={rootNode.children} level={0} />
   {:else}
     Loading...
   {/if}

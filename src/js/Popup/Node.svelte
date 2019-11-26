@@ -2,6 +2,7 @@
   import { openingDirectory, hoveringNode } from '../store'
   import { executeBehavior } from './behaviors'
   import Node from './Node.svelte'
+  import Children from './Children.svelte'
 
   export let node
   export let level
@@ -50,8 +51,7 @@
   <div class='icon'><img class='icon' src={iconUrl} alt={node.title} /></div>
   <div class='node-title' title={node.title}>{node.title}</div>
 </div>
+
 {#if node.children && $opening}
-  {#each node.children as child (child.id)}
-    <Node node={child} level={level + 1} />
-  {/each}
+  <Children nodes={node.children} level={level + 1} />
 {/if}
