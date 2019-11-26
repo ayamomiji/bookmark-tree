@@ -12,19 +12,33 @@
 </script>
 
 <style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+
   #tree {
     overflow-y: scroll;
+    flex-grow: 1;
+  }
+
+  .search:focus {
+    outline: none;
   }
 </style>
 
 <svelte:body on:contextmenu={e => e.preventDefault()} />
 
-<div id='tree'>
-  {#if rootNode}
-    <Children nodes={rootNode.children} level={0} />
-  {:else}
-    Loading...
-  {/if}
+<div class='container'>
+  <div id='tree'>
+    {#if rootNode}
+      <Children nodes={rootNode.children} level={0} />
+    {:else}
+      Loading...
+    {/if}
+  </div>
+  <URL />
 </div>
-<URL />
 <CustomStyle />

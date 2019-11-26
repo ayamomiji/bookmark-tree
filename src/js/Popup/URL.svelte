@@ -4,7 +4,7 @@
 
 <style>
   #url {
-    border-top: 1px solid gray;
+    border-top: 1px solid lightgray;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
