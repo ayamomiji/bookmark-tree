@@ -64,6 +64,8 @@
 <div class='text-muted'>
   Available selectors are:
   <code>body</code>,
+  <code>.container</code>,
+  <code>.search</code>,
   <code>#tree</code>,
   <code>#url</code>,
   <code>.node</code>,

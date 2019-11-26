@@ -9,6 +9,17 @@
   chrome.bookmarks.getSubTree($rootDirectory, nodes => {
     rootNode = nodes[0]
   })
+
+  let keyword = ''
+  let result = null
+
+  $: if (keyword.trim() !== '') {
+    chrome.bookmarks.search(keyword, nodes => {
+      result = nodes
+    })
+  } else {
+    result = null
+  }
 </script>
 
 <style>
@@ -24,6 +35,13 @@
     flex-grow: 1;
   }
 
+  .search {
+    width: 100%;
+    border: 0;
+    padding: 0.25em;
+    border-bottom: 1px solid lightgray;
+  }
+
   .search:focus {
     outline: none;
   }
@@ -32,8 +50,12 @@
 <svelte:body on:contextmenu={e => e.preventDefault()} />
 
 <div class='container'>
+  <input type='search' autofocus class='search' placeholder='Type to search...'
+      bind:value={keyword} />
   <div id='tree'>
-    {#if rootNode}
+    {#if result}
+      <Children nodes={result} level={0} />
+    {:else if rootNode}
       <Children nodes={rootNode.children} level={0} />
     {:else}
       Loading...
