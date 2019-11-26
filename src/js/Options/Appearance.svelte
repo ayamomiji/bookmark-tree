@@ -14,19 +14,19 @@
 <h3><T key='size' /></h3>
 
 <div class='form-group row'>
-  <label for='width' class='col-sm-2 col-form-label'>
+  <label for='width' class='col-sm-4 col-form-label'>
     <T key='width' />
   </label>
-  <div class='col-sm-10'>
+  <div class='col-sm-8'>
     <input class='form-control' id='width' type='number'
         bind:value={$width} />
   </div>
 </div>
 <div class='form-group row'>
-  <label for='height' class='col-sm-2 col-form-label'>
+  <label for='height' class='col-sm-4 col-form-label'>
     <T key='height' />
   </label>
-  <div class='col-sm-10'>
+  <div class='col-sm-8'>
     <input class='form-control' id='height' type='number'
         bind:value={$height} />
   </div>
@@ -35,21 +35,24 @@
 <h3><T key='font' /></h3>
 
 <div class='form-group row'>
-  <label for='fontFace' class='col-sm-2 col-form-label'>
+  <label for='fontFace' class='col-sm-4 col-form-label'>
     <T key='fontFace' />
   </label>
-  <div class='col-sm-10'>
+  <div class='col-sm-8'>
     <input class='form-control' id='fontFace' type='string'
         bind:value={$fontFace} />
   </div>
 </div>
 <div class='form-group row'>
-  <label for='fontSize' class='col-sm-2 col-form-label'>
+  <label for='fontSize' class='col-sm-4 col-form-label'>
     <T key='fontSize' />
   </label>
-  <div class='col-sm-10'>
+  <div class='col-sm-8'>
     <input class='form-control' id='fontSize' type='string'
         bind:value={$fontSize} />
+  </div>
+  <div class='col-sm-12'>
+    <div class='form-text text-muted'><T key='fontSizeTips' /></div>
   </div>
 </div>
 

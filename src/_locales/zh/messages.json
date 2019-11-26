@@ -105,11 +105,7 @@
     "message": "Alt"
   },
   "meta": {
-    "message": "Meta"
-  },
-  "shortcutsNotice": {
-    "message": "快速鍵目前只能運作在讀取完畢的頁面中.
-                (Google 瀏覽器還未原生支援這項特性)"
+    "message": "Cmd"
   },
   "rememberOpenedDirectories": {
     "message": "記住開啟的目錄"

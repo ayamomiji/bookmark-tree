@@ -6,7 +6,7 @@
     "message": "Provides a button to show bookmark tree and open bookmark in new tab."
   },
   "optionsPage": {
-    "message": "Options page for Bookmark Tree"
+    "message": "Bookmark Tree Options"
   },
   "appearance": {
     "message": "Appearance"
@@ -105,11 +105,7 @@
     "message": "Alt"
   },
   "meta": {
-    "message": "Meta"
-  },
-  "shortcutsNotice": {
-    "message": "Shortcuts are only worked in fully loaded pages for now.
-                (Google Chrome does not support this feature native yet)"
+    "message": "Cmd"
   },
   "rememberOpenedDirectories": {
     "message": "Remember opened directories"

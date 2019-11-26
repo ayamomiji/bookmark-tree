@@ -11,15 +11,15 @@
   <h1><T key='optionsPage' /></h1>
 
   <div class='row'>
-    <section class='col-4'>
+    <section class='col-md-4'>
       <Appearance />
     </section>
 
-    <section class='col-4'>
+    <section class='col-md-4'>
       <Behaviors />
     </section>
 
-    <section class='col-4'>
+    <section class='col-md-4'>
       <Shortcuts />
       <Miscellaneous />
       <Contact />
