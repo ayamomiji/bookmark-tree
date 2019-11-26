@@ -111,8 +111,8 @@
     "message": "Shortcuts are only worked in fully loaded pages for now.
                 (Google Chrome does not support this feature native yet)"
   },
-  "rememberOpenedDirectory": {
-    "message": "Remember opened directory"
+  "rememberOpenedDirectories": {
+    "message": "Remember opened directories"
   },
   "hideScrollbar": {
     "message": "Hide scrollbar"

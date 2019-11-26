@@ -11,26 +11,6 @@ const fontSize = writable(localStorage.fontSize || '80%')
 
 const customStyle = writable(localStorage.customStyle || '')
 
-// node state
-const openingDirectories = writable(
-  JSON.parse(localStorage.openingDirectories ||
-             localStorage.openingDirectory || // for backward compatibility ><
-             '{}')
-)
-openingDirectories.subscribe(value => {
-  localStorage.openingDirectories = JSON.stringify(value)
-})
-
-const openingDirectory = id =>
-  derived(openingDirectories, $openingDirectories => $openingDirectories[id])
-
-const toggleDirectory = id => {
-  const current = get(openingDirectories)
-  openingDirectories.set({ ...current, [id]: !current[id] })
-}
-
-const hoveringNode = writable()
-
 // behaviors
 if (localStorage.behaviors) { // for backward compatibility ><
   const legacyBehaviors = JSON.parse(localStorage.behaviors)
@@ -89,10 +69,42 @@ const openBookmarkTreeInNewWindow = writable(
              '{"modifier":"alt","key":"w"}')
 )
 
+// misc
+if (localStorage.rememberOpenedDirectory) { // for backward compatibility ><
+  localStorage.rememberOpenedDirectories = localStorage.rememberOpenedDirectory
+  localStorage.removeItem('rememberOpenedDirectory')
+}
+const rememberOpenedDirectories =
+  writable(localStorage.rememberOpenedDirectories == 'true')
+
+// node state
+const openingDirectories = writable(
+  get(rememberOpenedDirectories) ?
+    JSON.parse(localStorage.openingDirectories ||
+               localStorage.openingDirectory || // for backward compatibility ><
+               '{}') : {}
+)
+
+const openingDirectory = id =>
+  derived(openingDirectories, $openingDirectories => $openingDirectories[id])
+
+const toggleDirectory = id => {
+  const current = get(openingDirectories)
+  openingDirectories.set({ ...current, [id]: !current[id] })
+}
+openingDirectories.subscribe(value => {
+  if (get(rememberOpenedDirectories)) {
+    localStorage.openingDirectories = JSON.stringify(value)
+  }
+})
+
+const hoveringNode = writable()
+
 export {
   width, height, fontFace, fontSize, customStyle,
-  openingDirectory, toggleDirectory, hoveringNode,
   bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior,
   directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior,
-  disableShortcuts, openBookmarkTreeInNewTab, openBookmarkTreeInNewWindow
+  disableShortcuts, openBookmarkTreeInNewTab, openBookmarkTreeInNewWindow,
+  rememberOpenedDirectories,
+  openingDirectory, toggleDirectory, hoveringNode,
 }
