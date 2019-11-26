@@ -1,11 +1,12 @@
 <script>
+  import { rootDirectory } from '../store'
   import Children from './Children.svelte'
   import URL from './URL.svelte'
   import CustomStyle from './CustomStyle.svelte'
 
   let rootNode
 
-  chrome.bookmarks.getTree(nodes => {
+  chrome.bookmarks.getSubTree($rootDirectory, nodes => {
     rootNode = nodes[0]
   })
 </script>

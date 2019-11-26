@@ -80,6 +80,9 @@ const rememberOpenedDirectories =
 const moveDirectoriesToListTop =
   writable(localStorage.moveDirectoriesToListTop == 'true')
 
+const rootDirectory =
+  writable(localStorage.rootDirectory || '0')
+
 // node state
 const openingDirectories = writable(
   get(rememberOpenedDirectories) ?
@@ -108,6 +111,6 @@ export {
   bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior,
   directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior,
   disableShortcuts, openBookmarkTreeInNewTab, openBookmarkTreeInNewWindow,
-  rememberOpenedDirectories, moveDirectoriesToListTop,
+  rememberOpenedDirectories, moveDirectoriesToListTop, rootDirectory,
   openingDirectory, toggleDirectory, hoveringNode,
 }
