@@ -89,8 +89,8 @@
   "shortcuts": {
     "message": "Shortcuts"
   },
-  "disableShortcuts": {
-    "message": "Disable shortcuts"
+  "shortcutsTip": {
+    "message": "Following this URL to configure shortcuts (copy/paste it to the location bar)"
   },
   "openBookmarkTreeInNewTab": {
     "message": "Open BookmarkTree in new tab"

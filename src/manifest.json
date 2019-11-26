@@ -20,11 +20,21 @@
     "bookmarks",
     "tabs"
   ],
-  "content_scripts": [
-    {
-      "matches": [ "http://*/*", "https://*/*" ],
-      "js": [ "content.bundle.js" ]
+  "commands": {
+    "openBookmarkTreeInNewTab": {
+      "description": "__MSG_openBookmarkTreeInNewTab__",
+      "suggested_key": {
+        "default": "Alt+B",
+        "mac": "Command+B"
+      }
+    },
+    "openBookmarkTreeInNewWindow": {
+      "description": "__MSG_openBookmarkTreeInNewWindow__",
+      "suggested_key": {
+        "default": "Alt+K",
+        "mac": "Command+K"
+      }
     }
-  ],
+  },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

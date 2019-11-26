@@ -1,7 +1,4 @@
-import {
-  readWidth, readHeight,
-  readDisableShortcuts, readOpenBookmarkTreeInNewTab, readOpenBookmarkTreeInNewWindow
-} from './store'
+import { readWidth, readHeight } from './store'
 import '../img/icon.png'
 
 chrome.extension.onRequest.addListener(function (req, sender, callback) {
@@ -9,8 +6,21 @@ chrome.extension.onRequest.addListener(function (req, sender, callback) {
     case 'openAllInNewWindow':
       openAllInNewWindow(req.directory.children)
       break
-    case 'keydown':
-      handleShortcut(req)
+  }
+})
+
+chrome.commands.onCommand.addListener(function(command) {
+  console.log('Command:', command)
+  switch (command) {
+    case 'openBookmarkTreeInNewTab':
+      chrome.tabs.create({
+        url: chrome.extension.getURL('popup.html?full')
+      })
+      break
+    case 'openBookmarkTreeInNewWindow':
+      window.open(chrome.extension.getURL('popup.html?full'),
+                  '',
+                  `width=${readWidth()},height=${readHeight()}`)
       break
   }
 })
@@ -28,27 +38,4 @@ function openAllInNewWindow (children) {
       })
     })
   )
-}
-
-function handleShortcut ({ key, modifier }) {
-  key = String.fromCharCode(key).toLowerCase()
-  if (readDisableShortcuts()) {
-    return
-  }
-
-  const newTab = readOpenBookmarkTreeInNewTab()
-  if (newTab.key === key &&
-      newTab.modifier === modifier) {
-    chrome.tabs.create({
-      url: chrome.extension.getURL('popup.html?full')
-    })
-  }
-
-  const newWindow = readOpenBookmarkTreeInNewWindow()
-  if (newWindow.key === key &&
-      newWindow.modifier === modifier) {
-    window.open(chrome.extension.getURL('popup.html?full'),
-                '',
-                `width=${readWidth()},height=${readHeight()}`)
-  }
 }

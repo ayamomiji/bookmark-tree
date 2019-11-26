@@ -89,8 +89,8 @@
   "shortcuts": {
     "message": "快速鍵"
   },
-  "disableShortcuts": {
-    "message": "禁用快速鍵"
+  "shortcutsTip": {
+    "message": "請到這裡設定快速鍵 (請將該網址複製貼上到網址列)"
   },
   "openBookmarkTreeInNewTab": {
     "message": "開啟書籤樹於新分頁"

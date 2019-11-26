@@ -81,12 +81,6 @@ function readOpenBookmarkTreeInNewWindow () {
                     '{"modifier":"alt","key":"w"}')
 }
 
-const disableShortcuts = writable(readDisableShortcuts())
-
-const openBookmarkTreeInNewTab = writable(readOpenBookmarkTreeInNewTab())
-
-const openBookmarkTreeInNewWindow = writable(readOpenBookmarkTreeInNewWindow())
-
 // misc
 if (localStorage.rememberOpenedDirectory) { // for backward compatibility ><
   localStorage.rememberOpenedDirectories = localStorage.rememberOpenedDirectory
@@ -131,9 +125,6 @@ export {
   width, height, fontFace, fontSize, customStyle,
   bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior,
   directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior,
-  readDisableShortcuts, readOpenBookmarkTreeInNewTab,
-  readOpenBookmarkTreeInNewWindow,
-  disableShortcuts, openBookmarkTreeInNewTab, openBookmarkTreeInNewWindow,
   rememberOpenedDirectories, moveDirectoriesToListTop, rootDirectory, sortBy,
   openingDirectory, toggleDirectory, hoveringNode,
 }
