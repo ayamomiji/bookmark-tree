@@ -1,7 +1,7 @@
 <script>
   import T from './Translation.svelte'
   import {
-    rememberOpenedDirectories, moveDirectoriesToListTop, rootDirectory
+    rememberOpenedDirectories, moveDirectoriesToListTop, rootDirectory, sortBy
   } from '../store'
   import DirectorySelect from './DirectorySelect.svelte'
 
@@ -10,6 +10,7 @@
   $: localStorage.setItem('moveDirectoriesToListTop',
                           $moveDirectoriesToListTop)
   $: localStorage.setItem('rootDirectory', $rootDirectory)
+  $: localStorage.setItem('sortBy', $sortBy)
 </script>
 
 <h2><T key='misc' /></h2>
@@ -35,4 +36,16 @@
     <T key='rootDirectory' />
   </label>
   <DirectorySelect bind:value={$rootDirectory} />
+</div>
+
+<div class='form-group'>
+  <label for='sortBy'>
+    <T key='sortBy' />
+  </label>
+  <select class='form-control' id='sortBy' bind:value={$sortBy}>
+    <option value='index'><T key='index' /></option>
+    <option value='id'><T key='id' /></option>
+    <option value='dateAdded'><T key='dateAdded' /></option>
+    <option value='title'><T key='title' /></option>
+  </select>
 </div>
