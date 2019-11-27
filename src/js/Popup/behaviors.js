@@ -53,7 +53,7 @@ function executeDirectoryBehavior (node, button) {
       break
     case 'openAllInCurrentWindow':
       node.children.forEach(child => {
-        chrome.tabs.create({ url: child.url })
+        !child.children && chrome.tabs.create({ url: child.url })
       })
       break
     case 'openAllInNewWindow':
