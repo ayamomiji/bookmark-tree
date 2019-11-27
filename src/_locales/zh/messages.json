@@ -65,6 +65,9 @@
   "openInNewWindow": {
     "message": "開啟於新視窗"
   },
+  "openInIncognitoWindow": {
+    "message": "開啟於無痕視窗"
+  },
   "directoryBehaviors": {
     "message": "目錄行為"
   },
@@ -85,6 +88,9 @@
   },
   "openAllInNewWindow": {
     "message": "開啟所有書籤於新視窗"
+  },
+  "openAllInNewIncognitoWindow": {
+    "message": "開啟所有書籤於新無痕視窗"
   },
   "shortcuts": {
     "message": "快速鍵"

@@ -27,6 +27,7 @@
     <option value='openInCurrentTab'><T key='openInCurrentTab' /></option>
     <option value='openInBackgroundTab'><T key='openInBackgroundTab' /></option>
     <option value='openInNewWindow'><T key='openInNewWindow' /></option>
+    <option value='openInIncognitoWindow'><T key='openInIncognitoWindow' /></option>
   </select>
 </div>
 
@@ -40,6 +41,7 @@
     <option value='openInCurrentTab'><T key='openInCurrentTab' /></option>
     <option value='openInBackgroundTab'><T key='openInBackgroundTab' /></option>
     <option value='openInNewWindow'><T key='openInNewWindow' /></option>
+    <option value='openInIncognitoWindow'><T key='openInIncognitoWindow' /></option>
   </select>
 </div>
 
@@ -53,6 +55,7 @@
     <option value='openInCurrentTab'><T key='openInCurrentTab' /></option>
     <option value='openInBackgroundTab'><T key='openInBackgroundTab' /></option>
     <option value='openInNewWindow'><T key='openInNewWindow' /></option>
+    <option value='openInIncognitoWindow'><T key='openInIncognitoWindow' /></option>
   </select>
 </div>
 
@@ -67,6 +70,7 @@
     <option value='toggle'><T key='toggle' /></option>
     <option value='openAllInCurrentWindow'><T key='openAllInCurrentWindow' /></option>
     <option value='openAllInNewWindow'><T key='openAllInNewWindow' /></option>
+    <option value='openAllInNewIncognitoWindow'><T key='openAllInNewIncognitoWindow' /></option>
   </select>
 </div>
 
@@ -79,6 +83,7 @@
     <option value='toggle'><T key='toggle' /></option>
     <option value='openAllInCurrentWindow'><T key='openAllInCurrentWindow' /></option>
     <option value='openAllInNewWindow'><T key='openAllInNewWindow' /></option>
+    <option value='openAllInNewIncognitoWindow'><T key='openAllInNewIncognitoWindow' />
   </select>
 </div>
 
@@ -91,5 +96,6 @@
     <option value='toggle'><T key='toggle' /></option>
     <option value='openAllInCurrentWindow'><T key='openAllInCurrentWindow' /></option>
     <option value='openAllInNewWindow'><T key='openAllInNewWindow' /></option>
+    <option value='openAllInNewIncognitoWindow'><T key='openAllInNewIncognitoWindow' />
   </select>
 </div>

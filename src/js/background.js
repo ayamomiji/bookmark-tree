@@ -6,11 +6,13 @@ chrome.extension.onRequest.addListener(function (req, sender, callback) {
     case 'openAllInNewWindow':
       openAllInNewWindow(req.directory.children)
       break
+    case 'openAllInNewIncognitoWindow':
+      openAllInNewWindow(req.directory.children, { incognito: true })
+      break
   }
 })
 
 chrome.commands.onCommand.addListener(function(command) {
-  console.log('Command:', command)
   switch (command) {
     case 'openBookmarkTreeInNewTab':
       chrome.tabs.create({
@@ -25,10 +27,10 @@ chrome.commands.onCommand.addListener(function(command) {
   }
 })
 
-function openAllInNewWindow (children) {
+function openAllInNewWindow (children, options = {}) {
   // open the first bookmark in new window
   chrome.windows.create(
-    { url: children.shift().url },
+    { url: children.shift().url, ...options },
     // and then open remaining bookmarks in the opened window
     window => children.forEach(child => {
       chrome.tabs.create({

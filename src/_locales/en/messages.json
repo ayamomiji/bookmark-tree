@@ -65,6 +65,9 @@
   "openInNewWindow": {
     "message": "Open in new window"
   },
+  "openInIncognitoWindow": {
+    "message": "Open in incognito window"
+  },
   "directoryBehaviors": {
     "message": "Directory behaviors"
   },
@@ -85,6 +88,9 @@
   },
   "openAllInNewWindow": {
     "message": "Open all children in new window"
+  },
+  "openAllInNewIncognitoWindow": {
+    "message": "Open all children in new incognito window"
   },
   "shortcuts": {
     "message": "Shortcuts"

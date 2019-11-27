@@ -34,6 +34,14 @@ function executeBookmarkBehavior (node, button) {
     case 'openInNewWindow':
       chrome.windows.create({ url: node.url })
       break
+    case 'openInIncognitoWindow':
+      chrome.windows.getCurrent(window => {
+        if (window.incognito) {
+          chrome.tabs.create({ url: node.url })
+        } else {
+          chrome.windows.create({ url: node.url, incognito: true })
+        }
+      })
   }
 }
 
@@ -51,6 +59,12 @@ function executeDirectoryBehavior (node, button) {
     case 'openAllInNewWindow':
       chrome.extension.sendRequest({
         type: 'openAllInNewWindow',
+        directory: node
+      })
+      break
+    case 'openAllInNewIncognitoWindow':
+      chrome.extension.sendRequest({
+        type: 'openAllInNewIncognitoWindow',
         directory: node
       })
       break
