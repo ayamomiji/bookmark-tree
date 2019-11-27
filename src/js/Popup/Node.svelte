@@ -46,7 +46,8 @@
   }
 </style>
 
-<div class='node' style={`padding-left: ${level}em;`} on:mouseup={handleClick}
+<div class='node' style={`padding-left: ${level}em;`}
+    on:mousedown={event => event.preventDefault()} on:mouseup={handleClick}
     on:mouseenter={setHovering} on:mouseleave={unsetHovering}>
   <div class='icon'><img class='icon' src={iconUrl} alt={node.title} /></div>
   <div class='node-title' title={node.title}>{node.title}</div>
