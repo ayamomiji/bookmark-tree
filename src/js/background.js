@@ -33,7 +33,7 @@ function openAllInNewWindow (children, options = {}) {
     { url: children.shift().url, ...options },
     // and then open remaining bookmarks in the opened window
     window => children.forEach(child => {
-      chrome.tabs.create({
+      !child.children && chrome.tabs.create({
         url: child.url,
         windowId: window.id,
         selected: false
