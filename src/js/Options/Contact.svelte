@@ -14,6 +14,9 @@
     </a>
   </li>
   <li>
+    <a href='https://patreon.com/ayamomiji' target='_blank'>Patreon</a>
+  </li>
+  <li>
     <a href='http://ayaya.tw' target='_blank'>
       Blog & Donate (for Chinese only)
     </a>
