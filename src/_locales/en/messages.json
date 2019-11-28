@@ -48,7 +48,7 @@
     "message": "On left clicked..."
   },
   "bookmarkMiddleBehavior": {
-    "message": "On middle clicked..."
+    "message": "On middle (or Cmd + left button) clicked..."
   },
   "bookmarkRightBehavior": {
     "message": "On right clicked..."
@@ -75,7 +75,7 @@
     "message": "On left clicked..."
   },
   "directoryMiddleBehavior": {
-    "message": "On middle clicked..."
+    "message": "On middle (or Cmd + left) clicked..."
   },
   "directoryRightBehavior": {
     "message": "On right clicked..."
