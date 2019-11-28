@@ -9,8 +9,9 @@ const buttons = ['left', 'middle', 'right']
 
 function executeBehavior (node, event) {
   const isDirectory = !!node.children
-  // simulates middle click by cmd + left click
-  const buttonIndex = (event.metaKey && event.button === 0) ? 1 : event.button
+  // simulates middle click by cmd/ctrl + left click
+  const buttonIndex =
+    ((event.metaKey || event.ctrlKey) && event.button === 0) ? 1 : event.button
   const button = buttons[buttonIndex]
   if (isDirectory) {
     executeDirectoryBehavior(node, button)

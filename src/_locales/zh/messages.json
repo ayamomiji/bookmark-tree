@@ -48,7 +48,7 @@
     "message": "當按下左鍵時..."
   },
   "bookmarkMiddleBehavior": {
-    "message": "當按下中鍵 (或者 Cmd + 左鍵) 時..."
+    "message": "當按下中鍵 (或者 Cmd/Ctrl + 左鍵) 時..."
   },
   "bookmarkRightBehavior": {
     "message": "當按下右鍵時..."
@@ -75,7 +75,7 @@
     "message": "當按下左鍵時..."
   },
   "directoryMiddleBehavior": {
-    "message": "當按下中鍵時..."
+    "message": "當按下中鍵 (或者 Cmd/Ctrl + 左鍵) 時..."
   },
   "directoryRightBehavior": {
     "message": "當按下右鍵時..."
