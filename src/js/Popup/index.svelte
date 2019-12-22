@@ -23,6 +23,10 @@
 </script>
 
 <style>
+  body {
+    overflow: hidden;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
