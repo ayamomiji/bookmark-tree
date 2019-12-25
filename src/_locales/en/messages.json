@@ -26,6 +26,9 @@
   "height": {
     "message": "Height"
   },
+  "sizeHint": {
+    "message": "The max size is 800x600."
+  },
   "font": {
     "message": "Font"
   },

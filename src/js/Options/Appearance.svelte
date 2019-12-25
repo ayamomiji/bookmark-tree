@@ -19,7 +19,7 @@
   </label>
   <div class='col-sm-8'>
     <input class='form-control' id='width' type='number'
-        bind:value={$width} />
+        bind:value={$width} max='800' />
   </div>
 </div>
 <div class='form-group row'>
@@ -28,9 +28,10 @@
   </label>
   <div class='col-sm-8'>
     <input class='form-control' id='height' type='number'
-        bind:value={$height} />
+        bind:value={$height} max='600' />
   </div>
 </div>
+<div class='text-muted'><T key='sizeHint' /></div>
 
 <h3><T key='font' /></h3>
 
