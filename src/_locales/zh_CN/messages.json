@@ -1,0 +1,158 @@
+{
+  "bookmarkTree": {
+    "message": "ayaya 的书籤树"
+  },
+  "description": {
+    "message": "提供一个可以显示书籤树, 并开启书籤的按钮."
+  },
+  "optionsPage": {
+    "message": "书籤树设定选项"
+  },
+  "appearance": {
+    "message": "外观"
+  },
+  "behaviors": {
+    "message": "行为"
+  },
+  "misc": {
+    "message": "杂项"
+  },
+  "size": {
+    "message": "大小"
+  },
+  "width": {
+    "message": "宽"
+  },
+  "height": {
+    "message": "高"
+  },
+  "sizeHint": {
+    "message": "最大限制为 800x600."
+  },
+  "font": {
+    "message": "字型"
+  },
+  "fontFace": {
+    "message": "字体"
+  },
+  "fontSize": {
+    "message": "大小"
+  },
+  "fontSizeTips": {
+    "message": "提示: 你可以使用 px, em, pt, 或 % 做为单位."
+  },
+  "customStyle": {
+    "message": "自订样式"
+  },
+  "bookmarkBehaviors": {
+    "message": "书籤行为"
+  },
+  "bookmarkLeftBehavior": {
+    "message": "当按下左键时..."
+  },
+  "bookmarkMiddleBehavior": {
+    "message": "当按下中键 (或者 Cmd/Ctrl + 左键) 时..."
+  },
+  "bookmarkRightBehavior": {
+    "message": "当按下右键时..."
+  },
+  "openInNewTab": {
+    "message": "开启於新分页"
+  },
+  "openInCurrentTab": {
+    "message": "开启於目前分页"
+  },
+  "openInBackgroundTab": {
+    "message": "开启於背景新分页"
+  },
+  "openInNewWindow": {
+    "message": "开启於新视窗"
+  },
+  "openInIncognitoWindow": {
+    "message": "开启於无痕视窗"
+  },
+  "directoryBehaviors": {
+    "message": "目录行为"
+  },
+  "directoryLeftBehavior": {
+    "message": "当按下左键时..."
+  },
+  "directoryMiddleBehavior": {
+    "message": "当按下中键 (或者 Cmd/Ctrl + 左键) 时..."
+  },
+  "directoryRightBehavior": {
+    "message": "当按下右键时..."
+  },
+  "toggle": {
+    "message": "切换开关目录"
+  },
+  "openAllInCurrentWindow": {
+    "message": "开启所有书籤於目前视窗"
+  },
+  "openAllInNewWindow": {
+    "message": "开启所有书籤於新视窗"
+  },
+  "openAllInNewIncognitoWindow": {
+    "message": "开启所有书籤於新无痕视窗"
+  },
+  "shortcuts": {
+    "message": "快速键"
+  },
+  "shortcutsTip": {
+    "message": "请到这里设定快速键 (请将该网址複製贴上到网址列)"
+  },
+  "openBookmarkTreeInNewTab": {
+    "message": "开启书籤树於新分页"
+  },
+  "openBookmarkTreeInNewWindow": {
+    "message": "开启书籤树於新视窗"
+  },
+  "ctrl": {
+    "message": "Ctrl"
+  },
+  "alt": {
+    "message": "Alt"
+  },
+  "meta": {
+    "message": "Cmd"
+  },
+  "rememberOpenedDirectories": {
+    "message": "记住开启的目录"
+  },
+  "hideScrollbar": {
+    "message": "隐藏捲轴"
+  },
+  "closePopupAfterOpenBookmark": {
+    "message": "开启视窗後关闭弹出视窗"
+  },
+  "moveDirectoriesToListTop": {
+    "message": "移动所有目录到清单最顶端"
+  },
+  "disableSearchBar": {
+    "message": "停用搜寻列"
+  },
+  "rootDirectory": {
+    "message": "根目录"
+  },
+  "sortBy": {
+    "message": "排序方式"
+  },
+  "index": {
+    "message": "索引值"
+  },
+  "id": {
+    "message": "序号"
+  },
+  "dateAdded": {
+    "message": "加入日期"
+  },
+  "title": {
+    "message": "标题"
+  },
+  "contact": {
+    "message": "联络作者"
+  },
+  "aboutMe": {
+    "message": "我是 ayaya, 台湾人. 我使用中文为主, 但您也可以用英文或日文联络我. :)"
+  }
+}
