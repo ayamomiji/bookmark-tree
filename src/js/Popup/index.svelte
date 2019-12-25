@@ -1,5 +1,5 @@
 <script>
-  import { rootDirectory } from '../store'
+  import { rootDirectory, disableSearchBar } from '../store'
   import Children from './Children.svelte'
   import URL from './URL.svelte'
   import CustomStyle from './CustomStyle.svelte'
@@ -54,8 +54,11 @@
 <svelte:body on:contextmenu={e => e.preventDefault()} />
 
 <div class='container'>
-  <input type='search' autofocus class='search' placeholder='Type to search...'
-      bind:value={keyword} />
+  {#if !$disableSearchBar}
+    <input type='search' autofocus class='search' placeholder='Type to search...'
+        bind:value={keyword} />
+  {/if}
+
   <div id='tree'>
     {#if result}
       <Children nodes={result} level={0} />

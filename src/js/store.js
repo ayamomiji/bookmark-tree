@@ -92,6 +92,9 @@ const rememberOpenedDirectories =
 const moveDirectoriesToListTop =
   writable(localStorage.moveDirectoriesToListTop == 'true')
 
+const disableSearchBar =
+  writable(localStorage.disableSearchBar == 'true')
+
 const rootDirectory =
   writable(localStorage.rootDirectory || '0')
 
@@ -125,6 +128,6 @@ export {
   width, height, fontFace, fontSize, customStyle,
   bookmarkLeftBehavior, bookmarkMiddleBehavior, bookmarkRightBehavior,
   directoryLeftBehavior, directoryMiddleBehavior, directoryRightBehavior,
-  rememberOpenedDirectories, moveDirectoriesToListTop, rootDirectory, sortBy,
-  openingDirectory, toggleDirectory, hoveringNode,
+  rememberOpenedDirectories, moveDirectoriesToListTop, disableSearchBar,
+  rootDirectory, sortBy, openingDirectory, toggleDirectory, hoveringNode
 }

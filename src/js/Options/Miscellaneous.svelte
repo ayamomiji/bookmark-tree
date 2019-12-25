@@ -1,7 +1,8 @@
 <script>
   import T from './Translation.svelte'
   import {
-    rememberOpenedDirectories, moveDirectoriesToListTop, rootDirectory, sortBy
+    rememberOpenedDirectories, moveDirectoriesToListTop, disableSearchBar,
+    rootDirectory, sortBy
   } from '../store'
   import DirectorySelect from './DirectorySelect.svelte'
 
@@ -9,6 +10,8 @@
                           $rememberOpenedDirectories)
   $: localStorage.setItem('moveDirectoriesToListTop',
                           $moveDirectoriesToListTop)
+  $: localStorage.setItem('disableSearchBar',
+                          $disableSearchBar)
   $: localStorage.setItem('rootDirectory', $rootDirectory)
   $: localStorage.setItem('sortBy', $sortBy)
 </script>
@@ -28,6 +31,14 @@
       bind:checked={$moveDirectoriesToListTop}>
   <label class='form-check-label' for='moveDirectoriesToListTop'>
     <T key='moveDirectoriesToListTop' />
+  </label>
+</div>
+
+<div class='form-check'>
+  <input class='form-check-input' type='checkbox' id='disableSearchBar'
+      bind:checked={$disableSearchBar}>
+  <label class='form-check-label' for='disableSearchBar'>
+    <T key='disableSearchBar' />
   </label>
 </div>
 

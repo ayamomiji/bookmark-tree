@@ -128,6 +128,9 @@
   "moveDirectoriesToListTop": {
     "message": "移動所有目錄到清單最頂端"
   },
+  "disableSearchBar": {
+    "message": "停用搜尋列"
+  },
   "rootDirectory": {
     "message": "根目錄"
   },
