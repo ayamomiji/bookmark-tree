@@ -2,11 +2,11 @@ import { writable, derived, get } from 'svelte/store'
 
 // appearance
 function readWidth () {
-  return parseInt(localStorage.width) || 300
+  return Math.min(parseInt(localStorage.width) || 300, 800)
 }
 
 function readHeight () {
-  return parseInt(localStorage.height) || 400
+  return Math.min(parseInt(localStorage.height) || 400, 600)
 }
 
 const width = writable(readWidth())

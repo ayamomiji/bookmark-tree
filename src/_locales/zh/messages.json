@@ -26,6 +26,9 @@
   "height": {
     "message": "高"
   },
+  "sizeHint": {
+    "message": "最大限制為 800x600."
+  },
   "font": {
     "message": "字型"
   },
