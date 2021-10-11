@@ -16,8 +16,7 @@
   "manifest_version": 2,
   "permissions": [
     "chrome://favicon/",
-    "bookmarks",
-    "tabs"
+    "bookmarks"
   ],
   "commands": {
     "openBookmarkTreeInNewTab": {
