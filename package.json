@@ -1,6 +1,6 @@
 {
   "name": "bookmark-tree",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "description": "Provides a button to show bookmark tree and open bookmark in new tab.",
   "scripts": {
     "build": "node utils/build.js",
