@@ -32,7 +32,7 @@ function executeBookmarkBehavior (node, button) {
       })
       break
     case 'openInBackgroundTab':
-      chrome.tabs.create({ url: node.url, selected: false })
+      chrome.tabs.create({ url: node.url, active: false })
       break
     case 'openInNewWindow':
       chrome.windows.create({ url: node.url })
